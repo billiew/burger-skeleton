@@ -43,7 +43,7 @@ ingredient_id,ingredient_sv,ingredient_en,category,milk_free,gluten_free,vegan,s
 42,hummus,hummus,3,1,1,1,10
 43,ketchup,ketchup,3,1,1,1,0
 44,majonnäs,mayonnaise,3,1,1,0,5
-45,senap,mustard,3,1,1,1,0
+45,senap,mustard,3,1,1,1,1
 46,sriracha,sriracha,3,1,1,1,0
 47,teriyakisås,teriyaki sauce,3,1,1,1,5
 48,tryffelmajonnäs,truffle mayonnaise,3,1,1,0,5
