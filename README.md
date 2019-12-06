@@ -27,3 +27,18 @@ Start at Ordering.vue in the folder views. You will notice that the code is a st
 Notice how the template is using two different components Ingredient and OrderItem. You will find the declarations for these in the folder components.
 
 Try to read the code and figure out how things are connected. One special file, which is important to pay attention to is sharedVueStuff.js in components. This contains code that is used both in Ordering.vue and Kitchen.vue, which is read in as a mixin. This complicates the structure a bit but is a nifty way of keeping code duplication low.
+
+
+CHECKLIST
+
+Beställnig:
+- [ ] Redigering i beställningslista
+      kunna ta bort ingrediens och att flera av samma representeras av en siffra.
+- [ ] My burger/beställningssammanfattning till höger
+- [ ] Uppdelning av kategorierna med tillhörande knappar
+- [ ] Kunna ta bort ingrediens där man har tryck för den  
+      minus/plus på ingrediens
+
+
+Kök:
+- [ ] Inventory
