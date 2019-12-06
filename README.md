@@ -28,17 +28,18 @@ Notice how the template is using two different components Ingredient and OrderIt
 
 Try to read the code and figure out how things are connected. One special file, which is important to pay attention to is sharedVueStuff.js in components. This contains code that is used both in Ordering.vue and Kitchen.vue, which is read in as a mixin. This complicates the structure a bit but is a nifty way of keeping code duplication low.
 
+Bra länkar att läsa vidare på:
 
-CHECKLIST
-
-Beställnig:
-- [ ] Redigering i beställningslista
-      kunna ta bort ingrediens och att flera av samma representeras av en siffra.
-- [ ] My burger/beställningssammanfattning till höger
-- [ ] Uppdelning av kategorierna med tillhörande knappar
-- [ ] Kunna ta bort ingrediens där man har tryck för den  
-      minus/plus på ingrediens
+Om flikar:
 
 
-Kök:
-- [ ] Inventory
+https://www.w3schools.com/howto/howto_js_tabs.asp
+https://www.w3schools.com/css/css_navbar.asp
+
+
+Buttons:
+
+https://www.w3schools.com/css/css3_buttons.asp
+
+http://www.echoecho.com/htmlforms14.htm
+(länk ovan kanske bra när vi ska göra meny-rutorna)
