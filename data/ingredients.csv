@@ -44,7 +44,7 @@ ingredient_id,ingredient_sv,ingredient_en,category,milk_free,gluten_free,vegan,s
 43,ketchup,ketchup,3,1,1,1,0
 44,majonnäs,mayonnaise,3,1,1,0,5
 45,senap,mustard,3,1,1,1,1
-46,sriracha,sriracha,3,1,1,1,0
+46,sriracha,sriracha,3,1,1,1,1
 47,teriyakisås,teriyaki sauce,3,1,1,1,5
 48,tryffelmajonnäs,truffle mayonnaise,3,1,1,0,5
 49,tzatziki,tzatziki,3,0,1,0,5
