@@ -31,16 +31,17 @@ Try to read the code and figure out how things are connected. One special file, 
 
 CHECKLIST
 
-Beställnig:
+Beställning:
 - [ ] Redigering i beställningslista
       kunna ta bort ingrediens och att flera av samma representeras av en siffra.
 - [ ] My burger/beställningssammanfattning till höger
 - [ ] Uppdelning av kategorierna med tillhörande knappar
 - [ ] Kunna ta bort ingrediens där man har tryck för den  
       minus/plus på ingrediens
-
+- [ ] Att bara den kategorin man tryckt på syns i taget
 
 Kök:
+- [ ] Undo färdig order
 - [ ] Inventory
 
 
