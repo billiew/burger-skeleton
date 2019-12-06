@@ -39,6 +39,8 @@ Beställning:
 - [ ] Kunna ta bort ingrediens där man har tryck för den  
       minus/plus på ingrediens
 - [ ] Att bara den kategorin man tryckt på syns i taget
+- [ ] Fixa så rätt antal försvinner ut lagret
+- [ ] Kan inte lägga tom order
 
 Kök:
 - [ ] Undo färdig order
