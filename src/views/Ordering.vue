@@ -153,6 +153,7 @@ export default {
 
 #mybutton{
   width: 60%;
+  background-color: rgb(190, 210, 255);
 }
 button:hover {
   background-color: lightblue;
