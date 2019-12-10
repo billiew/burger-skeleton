@@ -30,6 +30,7 @@ Try to read the code and figure out how things are connected. One special file, 
 
 
 CHECKLIST
+/////
 
 Beställning:
 - [ ] Redigering i beställningslista
