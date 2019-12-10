@@ -35,8 +35,8 @@ CHECKLIST
 Beställning:
 - [ ] Redigering i beställningslista
       kunna ta bort ingrediens och att flera av samma representeras av en siffra.
-- [Bea o Billie] My burger/beställningssammanfattning till höger och fixa det till
-      en lista (vad en lagt till i sin beställning)
+- [x] My burger/beställningssammanfattning till höger
+- [ ] fixa det tillen lista (vad en lagt till i sin beställning)
 - [ ] Uppdelning av kategorierna med tillhörande knappar
 - [ ] Snygga till så alternativen ser ut som vi ville (layout)
 - [ ] Se till så en inte kan beställa mer än det finns i lager, även
@@ -46,12 +46,12 @@ Beställning:
 - [ ] Att bara den kategorin man tryckt på syns i taget
 - [ ] Fixa så rätt antal försvinner ut lagret
 - [ ] Kan inte lägga tom order
-- [ ] Kunna välja engelska
 - [ ] Startfönster
 - [ ] Tack för  din beställning, detta är ditt ordernummer-fönster
 - [ ]
 
 Kök:
+- [Sanna] Grid på beställningen, så de hamnar i en lista
 - [ ] Undo färdig order
 - [ ] Inventory
 
