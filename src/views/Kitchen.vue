@@ -3,16 +3,19 @@
   <button v-on:click="switchLang()">{{ uiLabels.language }}</button>
   <h1>{{ uiLabels.ordersInQueue }}</h1>
   <div>
-    <OrderItemToPrepare
-      v-for="(order, key) in orders"
-      v-if="order.status !== 'done'"
-      v-on:done="markDone(key)"
-      :order-id="key"
-      :order="order"
-      :ui-labels="uiLabels"
-      :lang="lang"
-      :key="key">
-    </OrderItemToPrepare>
+    <div class="wrapper">
+        <OrderItemToPrepare
+        class="orderitemtoprepare"
+        v-for="(order, key) in orders"
+        v-if="order.status !== 'done'"
+        v-on:done="markDone(key)"
+        :order-id="key"
+        :order="order"
+        :ui-labels="uiLabels"
+        :lang="lang"
+        :key="key">
+      </OrderItemToPrepare>
+    </div>
   </div>
   <h1>{{ uiLabels.ordersFinished }}</h1>
   <div>
@@ -64,5 +67,19 @@ export default {
   h1 {
     text-transform: uppercase;
     font-size: 1.4em;
+  }
+
+  .wrapper{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto;
+    padding: 2em;
+  }
+
+  .orderitemtoprepare {
+    border: 1px solid #ccd;
+    padding: 1em;
+    background-color: rgb(190, 210, 255);
+    /*background-image: url('~@/assets/exampleImage.jpg'); */
   }
 </style>
