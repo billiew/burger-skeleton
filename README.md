@@ -37,7 +37,7 @@ Beställning:
       kunna ta bort ingrediens och att flera av samma representeras av en siffra.
 - [Bea o Billie] My burger/beställningssammanfattning till höger
 - [ ] Uppdelning av kategorierna med tillhörande knappar
-- [ ] Snygga till så alternativen ser ut som vi ville
+- [ ] Snygga till så alternativen ser ut som vi ville (layout)
 - [ ] Se till så en inte kan beställa mer än det finns i lager, även
       att de saker som är noll i lager ej syns
 - [ ] Kunna ta bort ingrediens där man har tryck för den  
