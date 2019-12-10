@@ -37,6 +37,7 @@ Beställning:
       kunna ta bort ingrediens och att flera av samma representeras av en siffra.
 - [ ] My burger/beställningssammanfattning till höger
 - [ ] Uppdelning av kategorierna med tillhörande knappar
+- [ ] Snygga till så alternativen ser ut som vi ville
 - [ ] Kunna ta bort ingrediens där man har tryck för den  
       minus/plus på ingrediens
 - [ ] Att bara den kategorin man tryckt på syns i taget
