@@ -1,10 +1,10 @@
 <template>
   <div id="ordering">
-    <img class="example-panel" src="@/assets/exampleImage.jpg">
+    <img class="example-panel" src="@/assets/bubbles.jpg">
     <button v-on:click="switchLang()">{{ uiLabels.language }}</button>
     <div  class="wrapper">
-      <div>
-        <h1>{{ uiLabels.ingredients }}</h1>
+      <div class="wrapper2">
+        <!-- <h1>{{ uiLabels.ingredients }}</h1> -->
         <Ingredient
         ref="ingredient"
         v-for="item in ingredients"
@@ -95,17 +95,27 @@ export default {
 /* scoped in the style tag means that these rules will only apply to elements, classes and ids in this template and no other templates. */
 #ordering {
   margin:auto;
-  width: 40em;
+  width: 70;
+  color: black;
 }
 
 .wrapper{
   display: grid;
   grid-gap: 10px;
   grid-template-columns: auto auto;
+  padding: 2em;
+}
+
+.wrapper2{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto;
+  padding: 2em;
 }
 
 .example-panel {
   width: 100%;
+  height: 100%;
   position: fixed;
   left:0;
   top:0;
@@ -114,7 +124,7 @@ export default {
 .ingredient {
   border: 1px solid #ccd;
   padding: 1em;
-  background-image: url('~@/assets/exampleImage.jpg');
-  color: white;
+  background-color: rgb(255, 200, 200);
+  /* background-image: url('~@/assets/exampleImage.jpg'); */
 }
 </style>
