@@ -38,11 +38,17 @@ Beställning:
 - [ ] My burger/beställningssammanfattning till höger
 - [ ] Uppdelning av kategorierna med tillhörande knappar
 - [ ] Snygga till så alternativen ser ut som vi ville
+- [ ] Se till så en inte kan beställa mer än det finns i lager, även
+      att de saker som är noll i lager ej syns
 - [ ] Kunna ta bort ingrediens där man har tryck för den  
       minus/plus på ingrediens
 - [ ] Att bara den kategorin man tryckt på syns i taget
 - [ ] Fixa så rätt antal försvinner ut lagret
 - [ ] Kan inte lägga tom order
+- [ ] Kunna välja engelska
+- [ ] Startfönster
+- [ ] Tack för  din beställning, detta är ditt ordernummer-fönster
+- [ ]
 
 Kök:
 - [ ] Undo färdig order
