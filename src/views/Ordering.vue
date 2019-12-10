@@ -2,7 +2,19 @@
   <div id="ordering">
     <img class="example-panel" src="@/assets/bubbles.jpg">
     <button v-on:click="switchLang()">{{ uiLabels.language }}</button>
+    <div class="menu2">
+      <button id="mybutton"> <img src="@/assets/burger.png" height="50"> </button>
+      <button id="mybutton"><img src="@/assets/soda.png" height="50"> </button>
+      <button id="mybutton"> <img src="@/assets/fries.png" height="60"></button>
+      </div>
+    <div class="menu">
+      <button id="mybutton"> BURGARE </button>
+      <button id="mybutton"> BRÖD </button>
+      <button id="mybutton"> PÅLÄGG </button>
+      <button id="mybutton"> SÅS </button>
+    </div>
     <div  class="wrapper">
+
       <div class="wrapper2">
         <!-- <h1>{{ uiLabels.ingredients }}</h1> -->
         <Ingredient
@@ -15,10 +27,10 @@
       </Ingredient>
     </div>
     <div>
-    <h1>{{ uiLabels.order }}</h1>
-    {{ chosenIngredients.map(item => item["ingredient_"+lang]).join(', ') }}, {{ price }} kr
-    <button v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
-  </div>
+      <h1>{{ uiLabels.order }}</h1>
+      {{ chosenIngredients.map(item => item["ingredient_"+lang]).join(', ') }}, {{ price }} kr
+      <button v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
+    </div>
   </div>
   <h1>{{ uiLabels.ordersInQueue }}</h1>
   <div>
@@ -99,6 +111,18 @@ export default {
   color: black;
 }
 
+.menu{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 1em;
+}
+
+.menu2{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 1em;
+}
+
 .wrapper{
   display: grid;
   grid-gap: 10px;
@@ -110,7 +134,7 @@ export default {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: auto auto auto auto;
-  padding: 2em;
+  padding: 1em;
 }
 
 .example-panel {
@@ -125,6 +149,13 @@ export default {
   border: 1px solid #ccd;
   padding: 1em;
   background-color: rgb(190, 210, 255);
-  /* background-image: url('~@/assets/exampleImage.jpg'); */
+}
+
+#mybutton{
+  width: 60%;
+}
+button:hover {
+  background-color: lightblue;
+  cursor: pointer;
 }
 </style>
