@@ -35,7 +35,7 @@ CHECKLIST
 Beställning:
 - [ ] Redigering i beställningslista
       kunna ta bort ingrediens och att flera av samma representeras av en siffra.
-- [ ] My burger/beställningssammanfattning till höger
+- [Bea o Billie] My burger/beställningssammanfattning till höger
 - [ ] Uppdelning av kategorierna med tillhörande knappar
 - [ ] Snygga till så alternativen ser ut som vi ville
 - [ ] Se till så en inte kan beställa mer än det finns i lager, även
