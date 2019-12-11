@@ -62,7 +62,7 @@ Beställning:
 Kök:
 - [x] Grid på beställningen, så de hamnar i en lista
 - [ ] Fixa inne i grid, så det delas upp efter kategori
-- [ ] Undo färdig order
+- [Sanna, lagt till saker, men funkar ej] Undo färdig order
 - [ ] Inventory
 
 
