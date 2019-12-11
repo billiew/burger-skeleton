@@ -4,14 +4,14 @@
     <button v-on:click="switchLang()">{{ uiLabels.language }}</button>
     <div class="menu2">
       <button id="mybutton"> <img src="@/assets/burger.png" height="50"> </button>
-      <button id="mybutton"><img src="@/assets/soda.png" height="50"> </button>
-      <button id="mybutton"> <img src="@/assets/fries.png" height="60"></button>
+      <button id="mybutton" v-on:click="setCategory(6)"><img src="@/assets/soda.png" height="50"> </button>
+      <button id="mybutton" v-on:click="setCategory(5)"> <img src="@/assets/fries.png" height="60"></button>
       </div>
     <div class="menu">
       <button id="mybutton" v-on:click="setCategory(1)"> BURGARE </button>
-      <button id="mybutton"> BRÖD </button>
-      <button id="mybutton"> PÅLÄGG </button>
-      <button id="mybutton"> SÅS </button>
+      <button id="mybutton" v-on:click="setCategory(4)"> BRÖD </button>
+      <button id="mybutton" v-on:click="setCategory(2)"> PÅLÄGG </button>
+      <button id="mybutton" v-on:click="setCategory(3)"> SÅS </button>
     </div>
     <div  class="wrapper">
 

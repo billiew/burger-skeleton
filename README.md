@@ -41,15 +41,14 @@ Beställning:
       kunna ta bort ingrediens och att flera av samma representeras av en siffra.
 - [x] My burger/beställningssammanfattning till höger
 - [ ] fixa det tillen lista (vad en lagt till i sin beställning)
-- [ ] Uppdelning av kategorierna med tillhörande knappar
+- [X] Uppdelning av kategorierna med tillhörande knappar
 - [ ] Snygga till så alternativen ser ut som vi ville (layout)
 - [ ] Se till så en inte kan beställa mer än det finns i lager, även
       att de saker som är noll i lager ej syns
 - [ ] Kunna ta bort ingrediens där man har tryck för den  
       minus/plus på ingrediens
-- [ ] Att bara den kategorin man tryckt på syns i taget
+- [X] Att bara den kategorin man tryckt på syns i taget
 - [ ] Se till så att man hamnar i rätt kategori när sidan startar
-      Nu hamnar man på bröd och kan inte klicka sig vidare till andra kategorier efter burgare
 - [ ] Även knapparna "bröd,burgare,pålägg" ska byta språk när man klickar på knappen.
       Bör vi lägga till ett nytt  objekt i ui_en och ui_sv för det?
 - [x] Fixa så rätt antal försvinner ut lagret
