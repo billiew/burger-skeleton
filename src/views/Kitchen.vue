@@ -2,8 +2,8 @@
 <div id="orders">
   <button v-on:click="switchLang()">{{ uiLabels.language }}</button>
   <div>
-    <button id="mybutton" v-on:click="changeView('que')"> {{ uiLabels.ordersInQueue }} </button>
-    <button id="mybutton" v-on:click="changeView('finished')"> {{ uiLabels.ordersFinished }} </button>
+    <button id="mybutton" v-on:click="changeView('que')"> <h1>{{ uiLabels.ordersInQueue }}</h1> </button>
+    <button id="mybutton" v-on:click="changeView('finished')"> <h1>{{ uiLabels.ordersFinished }}</h1> </button>
   </div>
   <div id="kitchenorders">
     <div v-if="view==='que'">
