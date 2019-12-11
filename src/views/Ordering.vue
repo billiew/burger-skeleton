@@ -29,11 +29,11 @@
         :key="item.ingredient_id">
       </Ingredient>
     </div>
-    <div>
-      <h1>{{ uiLabels.order }}</h1>
+    <div id="PlaceOrderSection">
+      <h1 id="placeOrderText">{{ uiLabels.order }}</h1>
 
       {{ chosenIngredients.map(item => item["ingredient_"+lang]).join(', ') }}, {{ price }} kr
-      <button v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
+      <button id="placeOrderButton" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
     </div>
   </div>
 
@@ -134,6 +134,27 @@ export default {
   margin:auto;
   width: 70;
   color: black;
+}
+
+#placeOrderButton{
+  position:absolute;
+  bottom:20px;
+  right:30px;
+  font-size: 4vh;
+  padding: 2vh;
+  background-color: #4CAF50;
+  border-color: #000000;
+  border-radius: 10px;
+
+}
+#placeOrderText{
+  background-color: #87CEFA;
+  border-radius: 10px;
+}
+#PlaceOrderSection{
+  background-color:  	#ADD8E6;
+  border-radius: 8px;
+
 }
 
 .menu{
