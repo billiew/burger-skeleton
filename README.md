@@ -48,6 +48,10 @@ Beställning:
 - [ ] Kunna ta bort ingrediens där man har tryck för den  
       minus/plus på ingrediens
 - [ ] Att bara den kategorin man tryckt på syns i taget
+- [ ] Se till så att man hamnar i rätt kategori när sidan startar
+      Nu hamnar man på bröd och kan inte klicka sig vidare till andra kategorier efter burgare
+- [ ] Även knapparna "bröd,burgare,pålägg" ska byta språk när man klickar på knappen.
+      Bör vi lägga till ett nytt  objekt i ui_en och ui_sv för det?
 - [x] Fixa så rätt antal försvinner ut lagret
 - [ ] Kan inte lägga tom order
 - [ ] Startfönster
