@@ -8,7 +8,7 @@
       <button id="mybutton"> <img src="@/assets/fries.png" height="60"></button>
       </div>
     <div class="menu">
-      <button id="mybutton"> BURGARE </button>
+      <button id="mybutton" v-on:click="setCategory(1)"> BURGARE </button>
       <button id="mybutton"> BRÖD </button>
       <button id="mybutton"> PÅLÄGG </button>
       <button id="mybutton"> SÅS </button>
@@ -20,6 +20,7 @@
         <Ingredient
         ref="ingredient"
         v-for="item in ingredients"
+        v-if="item.category===currentCategory"
         v-on:increment="addToOrder(item)"
         :item="item"
         :lang="lang"
@@ -72,6 +73,7 @@ export default {
       chosenIngredients: [],
       price: 0,
       orderNumber: "",
+      currentCategory: 4
     }
   },
   created: function () {
@@ -80,6 +82,9 @@ export default {
     }.bind(this));
   },
   methods: {
+    setCategory: function (cat) {
+      this.currentCategory = cat;
+    },
     addToOrder: function (item) {
       this.chosenIngredients.push(item);
       this.price += +item.selling_price;

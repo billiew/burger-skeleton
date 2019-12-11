@@ -80,6 +80,5 @@ export default {
     border: 1px solid #ccd;
     padding: 1em;
     background-color: rgb(190, 210, 255);
-    /*background-image: url('~@/assets/exampleImage.jpg'); */
   }
 </style>
