@@ -22,7 +22,9 @@
   </div>
   <h1>{{ uiLabels.ordersFinished }}</h1>
   <div>
-    <OrderItem
+    <div class="wrapper2">
+      <OrderItem
+      class="orderitem"
       v-if="order.status === 'done'"
       v-for="(order, key) in orders"
       :order-id="key"
@@ -32,6 +34,7 @@
       :key="key">
     </OrderItem>
   </div>
+</div>
 </div>
 </template>
 <script>
@@ -82,8 +85,19 @@ export default {
     grid-template-columns: auto;
     padding: 2em;
   }
+  .wrapper2{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto;
+    padding: 2em;
+  }
 
   .orderitemtoprepare {
+    border: 1px solid #ccd;
+    padding: 1em;
+    background-color: rgb(190, 210, 255);
+  }
+  .orderitem {
     border: 1px solid #ccd;
     padding: 1em;
     background-color: rgb(190, 210, 255);
