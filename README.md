@@ -49,6 +49,7 @@ Beställning:
       minus/plus på ingrediens
 - [ ]Fixa knapparna så de fungerar felfritt
 - [X] Att bara den kategorin man tryckt på syns i taget
+- [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg osv. försvinna.
 - [ ] Se till så att man hamnar i rätt kategori när sidan startar
 - [X] Även knapparna "bröd,burgare,pålägg" ska byta språk när man klickar på knappen.
       Bör vi lägga till ett nytt  objekt i ui_en och ui_sv för det?
