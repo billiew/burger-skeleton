@@ -2,12 +2,15 @@
 <div id="orders">
   <button v-on:click="switchLang()">{{ uiLabels.language }}</button>
   <h1>{{ uiLabels.ordersInQueue }}</h1>
+  <div class="kitchenorders">
+    <button id="mybutton" v-on:click="setOrderView(1)"> {{ uiLabels.ordersInQueue }} </button>
+  </div>
   <div>
     <div class="wrapper">
         <OrderItemToPrepare
+        v-if="order.status !== 'done'"
         class="orderitemtoprepare"
         v-for="(order, key) in orders"
-        v-if="order.status !== 'done'"
         v-on:done="markDone(key)"
         :order-id="key"
         :order="order"
@@ -20,8 +23,8 @@
   <h1>{{ uiLabels.ordersFinished }}</h1>
   <div>
     <OrderItem
-      v-for="(order, key) in orders"
       v-if="order.status === 'done'"
+      v-for="(order, key) in orders"
       :order-id="key"
       :order="order"
       :lang="lang"
@@ -49,10 +52,14 @@ export default {
   data: function(){
     return {
       chosenIngredients: [],
-      price: 0
+      price: 0,
+      currentOrderView: 1
     }
   },
   methods: {
+    setOrderView: function (ord) {
+      this.currentOrderView = ord;
+    },
     markDone: function (orderid) {
       this.$store.state.socket.emit("orderDone", orderid);
     }
