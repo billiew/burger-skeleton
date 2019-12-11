@@ -29,6 +29,7 @@
       class="orderitem"
       v-if="order.status === 'done'"
       v-for="(order, key) in orders"
+      v-on:undo="markUndo(key)"
       :order-id="key"
       :order="order"
       :lang="lang"
@@ -64,6 +65,9 @@ export default {
   methods: {
     markDone: function (orderid) {
       this.$store.state.socket.emit("orderDone", orderid);
+    },
+    markUndo: function () {
+      this.$store.state.socket.emit("orderUndo", orderid);
     }
   }
 }
