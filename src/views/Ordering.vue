@@ -22,6 +22,7 @@
         v-for="item in ingredients"
         v-if="item.category===currentCategory"
         v-on:increment="addToOrder(item)"
+        v-on:decrement="removeFromOrder(item)"
         :item="item"
         :lang="lang"
         :key="item.ingredient_id">
@@ -90,6 +91,12 @@ export default {
       this.chosenIngredients.push(item);
       this.price += +item.selling_price;
     },
+    removeFromOrder: function (item) {
+      this.chosenIngredients.pop(item);
+      this.price -= +item.selling_price;
+
+    },
+
     placeOrder: function () {
       var i,
       //Wrap the order in an object

@@ -45,8 +45,9 @@ Beställning:
 - [ ] Snygga till så alternativen ser ut som vi ville (layout)
 - [ ] Se till så en inte kan beställa mer än det finns i lager, även
       att de saker som är noll i lager ej syns
-- [ ] Kunna ta bort ingrediens där man har tryck för den  
+- [x] Kunna ta bort ingrediens där man har tryck för den  
       minus/plus på ingrediens
+- [ ]Fixa knapparna så de fungerar felfritt
 - [X] Att bara den kategorin man tryckt på syns i taget
 - [ ] Se till så att man hamnar i rätt kategori när sidan startar
 - [X] Även knapparna "bröd,burgare,pålägg" ska byta språk när man klickar på knappen.

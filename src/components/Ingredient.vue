@@ -1,8 +1,15 @@
 <template>
   <div class="ingredient">
     <label>
-      <button v-on:click="incrementCounter">{{ counter }}</button>
-      {{item["ingredient_"+ lang]}}, {{item.selling_price}}:-, {{item.stock}} pcs
+      <button id="orderbuttons" v-on:click="decrementCounter"> <img src="@/assets/negative-sign-button.png" height="15"></button>
+      <button id="orderbuttons" > {{counter}} </button>
+      <button id="orderbuttons"  v-on:click="incrementCounter"> <img src="@/assets/plusbutton.png" height="15"></button>
+
+      <br>
+      {{item["ingredient_"+ lang]}}
+      <br>
+      {{item.selling_price}}:-
+      <br>{{item.stock}} pcs
     </label>
   </div>
 </template>
@@ -25,6 +32,12 @@ export default {
       // can catch it with v-on:increment in the component declaration
       this.$emit('increment');
     },
+    decrementCounter: function () {
+      this.counter -= 1;
+      // sending 'increment' message to parent component or view so that it
+      // can catch it with v-on:increment in the component declaration
+      this.$emit('decrement');
+    },
     resetCounter: function () {
       this.counter = 0;
     }
@@ -32,5 +45,11 @@ export default {
 }
 </script>
 <style scoped>
-  
+
+/*#orderbuttons{
+  padding:5px;
+  border-radius: 30px;
+}
+*/
+
 </style>
