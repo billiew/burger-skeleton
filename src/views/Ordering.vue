@@ -139,7 +139,7 @@ export default {
 .wrapper{
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 40vh;
   padding: 2em;
 }
 
