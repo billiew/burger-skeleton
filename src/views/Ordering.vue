@@ -74,7 +74,7 @@ export default {
       chosenIngredients: [],
       price: 0,
       orderNumber: "",
-      currentCategory: 4
+      currentCategory: 0
     }
   },
   created: function () {
