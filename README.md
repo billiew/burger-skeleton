@@ -55,7 +55,8 @@ Beställning:
 - [ ]
 
 Kök:
-- [Sanna] Grid på beställningen, så de hamnar i en lista
+- [x] Grid på beställningen, så de hamnar i en lista
+- [ ] Fixa inne i grid, så det delas upp efter kategori
 - [ ] Undo färdig order
 - [ ] Inventory
 
