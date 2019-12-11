@@ -3,7 +3,7 @@
     <img class="example-panel" src="@/assets/bubbles.jpg">
     <button v-on:click="switchLang()">{{ uiLabels.language }}</button>
     <div class="menu2">
-      <button id="mybutton"> <img src="@/assets/burger.png" height="50"> </button>
+      <button id="mybutton" v-on:click="setCategory(1)"> <img src="@/assets/burger.png" height="50"> </button>
       <button id="mybutton" v-on:click="setCategory(6)"><img src="@/assets/soda.png" height="50"> </button>
       <button id="mybutton" v-on:click="setCategory(5)"> <img src="@/assets/fries.png" height="60"></button>
       </div>
