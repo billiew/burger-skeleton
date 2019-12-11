@@ -1,11 +1,13 @@
 <template>
 <div id="orders">
   <button v-on:click="switchLang()">{{ uiLabels.language }}</button>
-  <h1>{{ uiLabels.ordersInQueue }}</h1>
-  <div class="kitchenorders">
-    <button id="mybutton" v-on:click="setOrderView(1)"> {{ uiLabels.ordersInQueue }} </button>
-  </div>
   <div>
+    <button id="mybutton" v-on:click="changeView('que')"> {{ uiLabels.ordersInQueue }} </button>
+    <button id="mybutton" v-on:click="changeView('finished')"> {{ uiLabels.ordersFinished }} </button>
+  </div>
+  <div id="kitchenorders">
+    <div v-if="view==='que'">
+    <h1>{{ uiLabels.ordersInQueue }}</h1>
     <div class="wrapper">
         <OrderItemToPrepare
         v-if="order.status !== 'done'"
@@ -20,8 +22,8 @@
       </OrderItemToPrepare>
     </div>
   </div>
-  <h1>{{ uiLabels.ordersFinished }}</h1>
-  <div>
+  <div v-if="view==='finished'">
+    <h1>{{ uiLabels.ordersFinished }}</h1>
     <div class="wrapper2">
       <OrderItem
       class="orderitem"
@@ -34,6 +36,7 @@
       :key="key">
     </OrderItem>
   </div>
+</div>
 </div>
 </div>
 </template>
@@ -56,18 +59,15 @@ export default {
     return {
       chosenIngredients: [],
       price: 0,
-      currentOrderView: 1
     }
   },
   methods: {
-    setOrderView: function (ord) {
-      this.currentOrderView = ord;
-    },
     markDone: function (orderid) {
       this.$store.state.socket.emit("orderDone", orderid);
     }
   }
 }
+
 </script>
 <style scoped>
 	#orders {
@@ -101,5 +101,11 @@ export default {
     border: 1px solid #ccd;
     padding: 1em;
     background-color: rgb(190, 210, 255);
+  }
+
+  #mybutton{
+    height: 100px;
+    width: 30%;
+    background-color: rgb(250, 210, 255);
   }
 </style>
