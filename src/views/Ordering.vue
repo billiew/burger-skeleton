@@ -23,6 +23,7 @@
         v-if="item.category===currentCategory"
         v-on:increment="addToOrder(item)"
         v-on:decrement="removeFromOrder(item)"
+        v-bind:item="item"
         :item="item"
         :lang="lang"
         :key="item.ingredient_id">
@@ -30,6 +31,7 @@
     </div>
     <div>
       <h1>{{ uiLabels.order }}</h1>
+
       {{ chosenIngredients.map(item => item["ingredient_"+lang]).join(', ') }}, {{ price }} kr
       <button v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
     </div>
@@ -92,8 +94,18 @@ export default {
       this.price += +item.selling_price;
     },
     removeFromOrder: function (item) {
-      this.chosenIngredients.pop(item);
-      this.price -= +item.selling_price;
+      let removeIndex = 0;
+     for (let i = 0; i < this.chosenIngredients.length; i += 1 ) {
+       if (this.chosenIngredients[i] === item) {
+         removeIndex = i;
+         break;
+       }
+     }
+     this.chosenIngredients.splice(removeIndex, 1);
+     if (this.price>0){
+     this.price -= +item.selling_price;
+   }
+
 
     },
 

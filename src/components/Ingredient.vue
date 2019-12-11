@@ -33,9 +33,12 @@ export default {
       this.$emit('increment');
     },
     decrementCounter: function () {
-      this.counter -= 1;
-      // sending 'increment' message to parent component or view so that it
-      // can catch it with v-on:increment in the component declaration
+      if(this.counter>0){
+        this.counter -= 1;
+      }
+
+      // sending 'decrement' message to parent component or view so that it
+      // can catch it with v-on:decrement in the component declaration
       this.$emit('decrement');
     },
     resetCounter: function () {
