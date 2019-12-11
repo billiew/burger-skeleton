@@ -33,7 +33,8 @@
       <button v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
     </div>
   </div>
-  <h1>{{ uiLabels.ordersInQueue }}</h1>
+
+  <!-- <h1>{{ uiLabels.ordersInQueue }}</h1>
   <div>
     <OrderItem
     v-for="(order, key) in orders"
@@ -44,7 +45,7 @@
     :lang="lang"
     :key="key">
   </OrderItem>
-</div>
+</div> -->
 </div>
 </template>
 <script>
@@ -151,6 +152,7 @@ export default {
   z-index: -2;
 }
 .ingredient {
+  text-align: center;
   border: 1px solid #ccd;
   padding: 1em;
   background-color: rgb(190, 210, 255);
