@@ -49,7 +49,7 @@ Beställning:
       minus/plus på ingrediens
 - [X] Att bara den kategorin man tryckt på syns i taget
 - [ ] Se till så att man hamnar i rätt kategori när sidan startar
-- [ ] Även knapparna "bröd,burgare,pålägg" ska byta språk när man klickar på knappen.
+- [X] Även knapparna "bröd,burgare,pålägg" ska byta språk när man klickar på knappen.
       Bör vi lägga till ett nytt  objekt i ui_en och ui_sv för det?
 - [x] Fixa så rätt antal försvinner ut lagret
 - [ ] Kan inte lägga tom order

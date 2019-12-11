@@ -8,10 +8,10 @@
       <button id="mybutton" v-on:click="setCategory(5)"> <img src="@/assets/fries.png" height="60"></button>
       </div>
     <div class="menu">
-      <button id="mybutton" v-on:click="setCategory(1)"> BURGARE </button>
-      <button id="mybutton" v-on:click="setCategory(4)"> BRÖD </button>
-      <button id="mybutton" v-on:click="setCategory(2)"> PÅLÄGG </button>
-      <button id="mybutton" v-on:click="setCategory(3)"> SÅS </button>
+      <button id="mybutton" v-on:click="setCategory(1)"> {{ uiLabels.patty }} </button>
+      <button id="mybutton" v-on:click="setCategory(4)"> {{ uiLabels.bread }} </button>
+      <button id="mybutton" v-on:click="setCategory(2)"> {{ uiLabels.addon }} </button>
+      <button id="mybutton" v-on:click="setCategory(3)"> {{ uiLabels.sauce }} </button>
     </div>
     <div  class="wrapper">
 
