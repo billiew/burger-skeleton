@@ -29,9 +29,9 @@ Notice how the template is using two different components Ingredient and OrderIt
 Try to read the code and figure out how things are connected. One special file, which is important to pay attention to is sharedVueStuff.js in components. This contains code that is used both in Ordering.vue and Kitchen.vue, which is read in as a mixin. This complicates the structure a bit but is a nifty way of keeping code duplication low.
 
 FRÅGOR:
-- Hur kopplar man en knapp till en kategori? Tex. Burgers till kategori 1.
+- Hur kopplar man en knapp till en kategori? Tex. Burgers till kategori 1. KLAR
 - Hur gör man en lista av ingredienserna som man beställt (gäller både Ordering och Kitchen). Vill dela upp efter kategori?
-- Varför drar den bort för många (2st istället för 1st) från lagret varje gång man beställer?
+- Varför drar den bort för många (2st istället för 1st) från lagret varje gång man beställer? KLAR
 
 CHECKLIST
 /////
@@ -48,7 +48,7 @@ Beställning:
 - [ ] Kunna ta bort ingrediens där man har tryck för den  
       minus/plus på ingrediens
 - [ ] Att bara den kategorin man tryckt på syns i taget
-- [ ] Fixa så rätt antal försvinner ut lagret
+- [x] Fixa så rätt antal försvinner ut lagret
 - [ ] Kan inte lägga tom order
 - [ ] Startfönster
 - [ ] Tack för  din beställning, detta är ditt ordernummer-fönster
