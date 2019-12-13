@@ -23,14 +23,13 @@ export default {
   // },
   methods: {
     removeStock: function () {
-      item.stock += 1;
-      this.$store.state.socket.emit('order', {order: order});
+      this.$store.state.socket.emit('updateStock', {ingredient: this.item}, this.item.stock-1);
       // sending 'increment' message to parent component or view so that it
       // can catch it with v-on:increment in the component declaration
     },
     addStock: function () {
-      if(item.stock>0){
-        item.stock -= 1;
+      if(this.item.stock>0){
+        this.item.stock += 1;
       }
 
       // sending 'decrement' message to parent component or view so that it
