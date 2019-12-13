@@ -41,12 +41,11 @@
 </div>
   <div v-if="view==='productStock'">
     <h1>{{ uiLabels.productsInStock }}</h1>
-    <Ingredient
+    <Ingredient>
 
   </Ingredient>
     </div>
   </div>
-</div>
 </div>
 </template>
 <script>
