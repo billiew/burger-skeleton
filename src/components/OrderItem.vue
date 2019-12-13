@@ -1,6 +1,12 @@
 <template>
 	<div>
-		{{orderId}} {{order.type}} {{uiLabels.ingredients}}: {{ order.ingredients.map(item=>item["ingredient_"+ lang]).join(", ") }}
+		{{uiLabels.order}}: #{{orderId}}
+		<div>
+		{{order.type}} {{uiLabels.ingredients}}:
+		</div>
+		<div v-for="item in order.ingredients" :key="item.ingredient_id">
+			{{ item["ingredient_"+lang] }}
+		</div>
 		<button v-on:click="orderUndo">
 			{{uiLabels.notReady}}
 		</button>
