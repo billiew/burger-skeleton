@@ -29,7 +29,6 @@ Notice how the template is using two different components Ingredient and OrderIt
 Try to read the code and figure out how things are connected. One special file, which is important to pay attention to is sharedVueStuff.js in components. This contains code that is used both in Ordering.vue and Kitchen.vue, which is read in as a mixin. This complicates the structure a bit but is a nifty way of keeping code duplication low.
 
 FRÅGOR:
-- Nummer framför betällning istället för dubletter?
 - Change stock?
 - Varför funkar inte Undo knappen?
 
@@ -48,7 +47,7 @@ Prioriterat:
 
 
 Beställning:
-- [ ] Att flera av samma i beställnignen representeras av en siffra.
+- [Väntar på video-instruktion deån Mikael] Att flera av samma i beställnignen representeras av en siffra.
 - [X] Se till så en inte kan beställa mer än det finns i lager
 - [ ]Fixa knapparna så de fungerar felfritt
 - [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg osv. försvinna.
@@ -57,8 +56,6 @@ Beställning:
 - [ ] Startfönster
 - [ ] Tack för  din beställning, detta är ditt ordernummer-fönster
 - [ ] Om man lagt till tex bröd och lägger till pålägg, för att sen gå tillbaka till bröd så står det 0 på det bröd man lagt till.
-- [Sanna] Ändra färg på knapp beroende på vilken avdelning man är i (just nu ändras bara färg om man klickat på en knapp, men färger försvinner om man klickar någon annanstans på sidan)
-- [ ] Lägga till footer eller padding, så att sidan inte tvärt tar slut
 
 Kök:
 - [X] Fixa inne i grid, så det delas upp efter kategori
@@ -72,7 +69,6 @@ Lågprioriterat:
 - [ ] Redigering i beställningslista
       kunna ta bort ingrediens
 - [ ] de ingredienser som inte finns i lager ska försvinna ur ordering view
-- [ ] Ordna de olika kategorierna på "rätt" ställe under Hamburger. (Tex så patty kommer först, sen bröd osv)
 
 
 Bra länkar att läsa vidare på:
