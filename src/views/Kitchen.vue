@@ -41,22 +41,24 @@
 </div>
   <div v-if="view==='productStock'">
     <h1>{{ uiLabels.productsInStock }}</h1>
-    <div class="">
+    <div class="menu">
+      <button id="mybutton" v-on:click="setCategory(1)"> {{ uiLabels.patty }} </button>
+      <button id="mybutton" v-on:click="setCategory(4)"> {{ uiLabels.bread }} </button>
+      <button id="mybutton" v-on:click="setCategory(2)"> {{ uiLabels.addon }} </button>
+      <button id="mybutton" v-on:click="setCategory(3)"> {{ uiLabels.sauce }} </button>
+      <button id="mybutton" v-on:click="setCategory(6)"> {{ uiLabels.drinks }} </button>
+      <button id="mybutton" v-on:click="setCategory(5)"> {{ uiLabels.sideorders }} </button>
+    </div>
+    <div>
       <IngredientStock
         ref="ingredientStock"
+        v-if="item.category===currentCategory"
         v-for="item in ingredients" onloadedmetadata=""
         :item="item"
         :lang="lang"
         :key="item.ingredient_id">
     </IngredientStock>
     </div>
-    <IngredientStock
-      ref="ingredientStock"
-      v-for="item in ingredients" onloadedmetadata=""
-      :item="item"
-      :lang="lang"
-      :key="item.ingredient_id">
-  </IngredientStock>
     </div>
   </div>
 </div>
@@ -84,9 +86,13 @@ export default {
     return {
       chosenIngredients: [],
       price: 0,
+      currentCategory: 0
     }
   },
   methods: {
+    setCategory: function (cat) {
+      this.currentCategory = cat;
+    },
     markDone: function (orderid) {
       this.$store.state.socket.emit("orderDone", orderid);
     },
@@ -132,8 +138,16 @@ export default {
   }
 
   #mybutton{
-    height: 100px;
+    height: 5em;
     width: 30%;
     background-color: rgb(250, 210, 255);
   }
+
+  .menu{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    padding: 1em;
+
+  }
+
 </style>
