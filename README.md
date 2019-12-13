@@ -72,6 +72,7 @@ Lågprioriterat:
 - [ ] Redigering i beställningslista
       kunna ta bort ingrediens
 - [ ] de ingredienser som inte finns i lager ska försvinna ur ordering view
+- [ ] Ordna de olika kategorierna på "rätt" ställe under Hamburger. (Tex så patty kommer först, sen bröd osv)
 
 
 Bra länkar att läsa vidare på:
