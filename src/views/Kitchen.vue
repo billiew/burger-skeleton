@@ -143,6 +143,10 @@ export default {
     background-color: rgb(250, 210, 255);
   }
 
+  #mybutton:focus {
+    background-color: LightSalmon;
+  }
+
   .menu{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
