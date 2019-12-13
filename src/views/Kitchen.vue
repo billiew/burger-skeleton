@@ -117,7 +117,7 @@ export default {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: auto;
-    padding: 2em;
+    padding: 0.5em;
   }
   .wrapper2{
     display: grid;
