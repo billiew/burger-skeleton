@@ -55,7 +55,7 @@ Beställning:
 - [ ] Kan inte lägga tom order
 - [ ] Startfönster
 - [ ] Tack för  din beställning, detta är ditt ordernummer-fönster
-- [ ]
+- [ ] Om man lagt till tex bröd och lägger till pålägg, för att sen gå tillbaka till bröd så står det 0 på det bröd man lagt till.
 
 Kök:
 - [ ] Fixa inne i grid, så det delas upp efter kategori
