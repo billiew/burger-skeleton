@@ -40,7 +40,7 @@ CHECKLIST
 /////
 
 Prioriterat:
-[X] Anpassar efter skärmstorlek
+- [ ] Anpassar efter skärmstorlek (någorlunda bra nu men måste vara bättre)
 
 
 Beställning:
@@ -53,7 +53,7 @@ Beställning:
 - [ ] Dela upp Beställningen (den på höger sida) i Hamburgare, Dryck och Tillbehör (så som det är uppdelat i Kitchen)
 
 Kök:
-
+- [ ] Submit-knappen i Stock ska ändra språk
 
 Lågprioriterat:
 - [ ] Snygga till knapparna
