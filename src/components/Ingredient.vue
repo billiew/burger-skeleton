@@ -4,7 +4,7 @@
       <span>
       <button id="orderbuttons" v-on:click="decrementCounter"> <img src="@/assets/negative-sign-button.png" height="15"></button>
       {{counter}}
-      <button :disabled="(item.stock==0)?true:false"  id="orderbuttons"  v-on:click="incrementCounter"> <img src="@/assets/plusbutton.png" height="15"></button>
+      <button :disabled="(counter>=item.stock)?true:false"  id="orderbuttons"  v-on:click="incrementCounter"> <img src="@/assets/plusbutton.png" height="15"></button>
       </span>
       <br>
       {{item["ingredient_"+ lang]}}
@@ -28,7 +28,9 @@ export default {
   },
   methods: {
     incrementCounter: function () {
+
       this.counter += 1;
+
       // sending 'increment' message to parent component or view so that it
       // can catch it with v-on:increment in the component declaration
       this.$emit('increment');
