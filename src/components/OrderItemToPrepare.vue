@@ -13,6 +13,7 @@
 </div>
 </template>
 <script>
+
 import OrderItem from '@/components/OrderItem.vue'
 
 export default {
@@ -30,6 +31,12 @@ export default {
       // can catch it with v-on:done in the component declaration
       this.$emit('done');
     },
+    /*orderUndo: function () {
+			// sending 'done' message to parent component or view so that it
+			// can catch it with v-on:done in the component declaration
+			this.$emit('undo', this.orderId);
+			//this.$store.state.socket.emit('orderUndo', this.orderId);
+		},*/
     cancelOrder: function () {
       // not implemented
     }

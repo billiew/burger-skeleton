@@ -38,6 +38,19 @@
       :key="key">
     </OrderItem>
   </div>
+  <div>
+    Undone
+    <OrderItem
+    class="orderitem"
+    v-for="(order, key) in orders"
+    v-on:undo="markUndo"
+    :order-id="key"
+    :order="order"
+    :lang="lang"
+    :ui-labels="uiLabels"
+    :key="key">
+  </OrderItem>
+  </div>
 </div>
   <div v-if="view==='productStock'">
     <h1>{{ uiLabels.productsInStock }}</h1>
