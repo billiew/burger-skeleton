@@ -76,7 +76,7 @@ export default {
     markDone: function (orderid) {
       this.$store.state.socket.emit("orderDone", orderid);
     },
-    markUndo: function () {
+    markUndo: function (orderid) {
       this.$store.state.socket.emit("orderUndo", orderid);
     }
   }

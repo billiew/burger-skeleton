@@ -2,7 +2,7 @@
 	<div>
 		{{orderId}} {{order.type}} {{uiLabels.ingredients}}: {{ order.ingredients.map(item=>item["ingredient_"+ lang]).join(", ") }}
 		<button v-on:click="orderUndo">
-	    {{uiLabels.notReady}}
+			{{uiLabels.notReady}}
 		</button>
 	</div>
 </template>
