@@ -9,6 +9,7 @@
   "pay" : "Betala",
   "sum" :"Summa",
   "productsInStock" : "Lagerstatus",
+  "changeStock": "Ändra lagerstatus",
   "order": "Order",
   "ordersFinished" : "Färdiga beställningar",
   "ordersInQueue" : "Beställningar att förbereda",

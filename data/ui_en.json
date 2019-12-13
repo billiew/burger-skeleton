@@ -9,6 +9,7 @@
   "pay" : "Pay",
   "sum": "Sum",
   "productsInStock" : "Stock",
+  "changeStock": "Change stock",
   "order": "Beställning",
   "ordersFinished" : "Finished orders",
   "ordersInQueue" : "Order queue",

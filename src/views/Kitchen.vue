@@ -99,7 +99,7 @@ export default {
     return {
       chosenIngredients: [],
       price: 0,
-      currentCategory: 0
+      currentCategory: 1
     }
   },
   methods: {
