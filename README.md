@@ -47,23 +47,19 @@ Prioriterat:
 
 
 Beställning:
-- [Väntar på video-instruktion deån Mikael] Att flera av samma i beställnignen representeras av en siffra.
-- [X] Se till så en inte kan beställa mer än det finns i lager
+- [Billie - Väntar på video-instruktion från Mikael] Att flera av samma i beställnignen representeras av en siffra.
 - [ ]Fixa knapparna så de fungerar felfritt
 - [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg osv. försvinna.
 - [ ] Se till så att man hamnar i rätt kategori när sidan startar
-- [X] Kan inte lägga tom order
 - [ ] Startfönster
 - [ ] Tack för  din beställning, detta är ditt ordernummer-fönster
 - [ ] Om man lagt till tex bröd och lägger till pålägg, för att sen gå tillbaka till bröd så står det 0 på det bröd man lagt till.
 
 Kök:
-- [X] Fixa inne i grid, så det delas upp efter kategori
 - [Sanna, lagt till saker, men funkar ej] Undo färdig order
 - [ ] Inventory
 
 Lågprioriterat:
-- [X] Kategorier i lagerstatusen i kitchenview
 - [ ] Snygga till knapparna
 - [ ] Snygga till så alternativen ser ut som vi ville (layout)
 - [ ] Redigering i beställningslista
