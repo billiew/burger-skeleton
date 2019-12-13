@@ -41,7 +41,7 @@ Prioriterat:
 [ ] Lista i myburger
 [ ] Lista i Kitchen (dela upp efter kategori)
 [ ] Se och uppdatera lagerstatus i kitchenview
-[ ] Anpassar efter skärmstorlek
+[X] Anpassar efter skärmstorlek
 
 
 Beställning:
