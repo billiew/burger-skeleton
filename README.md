@@ -29,10 +29,12 @@ Notice how the template is using two different components Ingredient and OrderIt
 Try to read the code and figure out how things are connected. One special file, which is important to pay attention to is sharedVueStuff.js in components. This contains code that is used both in Ordering.vue and Kitchen.vue, which is read in as a mixin. This complicates the structure a bit but is a nifty way of keeping code duplication low.
 
 FRÅGOR:
-- Varför måste man uppdatera sidan en eller flera (kitchen) gånger för att text mm ska visas?
+- Nummer framför betällning istället för dubletter?
+- Change stock?
 - Varför funkar inte Undo knappen?
+
+- Varför måste man uppdatera sidan en eller flera (kitchen) gånger för att text mm ska visas?
 - Varför återställs antalet ingredienser när man hoppar mellan kategorier?
-- change stock?
 
 (-dölja ingredienser som inte finns i lager?)
 
