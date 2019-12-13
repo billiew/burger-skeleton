@@ -209,6 +209,11 @@ export default {
   width: 60%;
   background-color: rgb(190, 210, 255);
 }
+
+#mybutton:focus {
+  background-color: LightSalmon;
+}
+
 button:hover {
   background-color: lightblue;
   cursor: pointer;
