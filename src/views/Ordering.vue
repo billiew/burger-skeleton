@@ -97,7 +97,6 @@ export default {
       this.price += +item.selling_price;
     },
     removeFromOrder: function (item) {
-      let removeIndex = 0;
      for (let i = 0; i < this.chosenIngredients.length; i += 1 ) {
        if (this.chosenIngredients[i] === item) {
          this.chosenIngredients.splice(i, 1);
