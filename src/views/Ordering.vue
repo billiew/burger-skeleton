@@ -6,7 +6,7 @@
       <button id="mybutton" v-on:click="setCategory(1)"> <img src="@/assets/burger.png" height="50"> </button>
       <button id="mybutton" v-on:click="setCategory(6)"><img src="@/assets/soda.png" height="50"> </button>
       <button id="mybutton" v-on:click="setCategory(5)"> <img src="@/assets/fries.png" height="60"></button>
-      </div>
+    </div>
     <div class="menu">
       <button id="mybutton" v-on:click="setCategory(1)"> {{ uiLabels.patty }} </button>
       <button id="mybutton" v-on:click="setCategory(4)"> {{ uiLabels.bread }} </button>
@@ -31,23 +31,27 @@
     </div>
     <div id="PlaceOrderSection">
       <h1 id="placeOrderText">{{ uiLabels.order }}</h1>
-
-      {{ chosenIngredients.map(item => item["ingredient_"+lang]).join(', ') }}, {{ price }} kr
+      <div v-for="item in chosenIngredients">
+        {{ item["ingredient_"+lang] }}
+      </div>
+      <div>
+        {{ price }} kr
+      </div>
       <button id="placeOrderButton" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
     </div>
   </div>
 
   <!-- <h1>{{ uiLabels.ordersInQueue }}</h1>
   <div>
-    <OrderItem
-    v-for="(order, key) in orders"
-    v-if="order.status !== 'done'"
-    :order-id="key"
-    :order="order"
-    :ui-labels="uiLabels"
-    :lang="lang"
-    :key="key">
-  </OrderItem>
+  <OrderItem
+  v-for="(order, key) in orders"
+  v-if="order.status !== 'done'"
+  :order-id="key"
+  :order="order"
+  :ui-labels="uiLabels"
+  :lang="lang"
+  :key="key">
+</OrderItem>
 </div> -->
 </div>
 </template>
@@ -95,16 +99,16 @@ export default {
     },
     removeFromOrder: function (item) {
       let removeIndex = 0;
-     for (let i = 0; i < this.chosenIngredients.length; i += 1 ) {
-       if (this.chosenIngredients[i] === item) {
-         removeIndex = i;
-         break;
-       }
-     }
-     this.chosenIngredients.splice(removeIndex, 1);
-     if (this.price>0){
-     this.price -= +item.selling_price;
-   }
+      for (let i = 0; i < this.chosenIngredients.length; i += 1 ) {
+        if (this.chosenIngredients[i] === item) {
+          removeIndex = i;
+          break;
+        }
+      }
+      this.chosenIngredients.splice(removeIndex, 1);
+      if (this.price>0){
+        this.price -= +item.selling_price;
+      }
 
 
     },
