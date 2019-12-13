@@ -98,7 +98,6 @@ export default {
     },
     removeFromOrder: function (item) {
       let removeIndex = 0;
-<<<<<<< HEAD
      for (let i = 0; i < this.chosenIngredients.length; i += 1 ) {
        if (this.chosenIngredients[i] === item) {
          this.chosenIngredients.splice(i, 1);
@@ -109,18 +108,6 @@ export default {
      }
 
    }
-=======
-      for (let i = 0; i < this.chosenIngredients.length; i += 1 ) {
-        if (this.chosenIngredients[i] === item) {
-          removeIndex = i;
-          break;
-        }
-      }
-      this.chosenIngredients.splice(removeIndex, 1);
-      if (this.price>0){
-        this.price -= +item.selling_price;
-      }
->>>>>>> 2a3f952d4b9694aac9f0943074cffda639335270
 
 
     },
