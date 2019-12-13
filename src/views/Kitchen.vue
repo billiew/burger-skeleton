@@ -40,7 +40,11 @@
   </div>
 </div>
   <div v-if="view==='productStock'">
-    hej
+    <h1>{{ uiLabels.productsInStock }}</h1>
+    <Ingredient
+
+  </Ingredient>
+    </div>
   </div>
 </div>
 </div>
@@ -48,6 +52,7 @@
 <script>
 import OrderItem from '@/components/OrderItem.vue'
 import OrderItemToPrepare from '@/components/OrderItemToPrepare.vue'
+import Ingredient from '@/components/Ingredient.vue'
 
 //import methods and data that are shared between ordering and kitchen views
 import sharedVueStuff from '@/components/sharedVueStuff.js'
@@ -56,7 +61,8 @@ export default {
   name: 'Ordering',
   components: {
     OrderItem,
-    OrderItemToPrepare
+    OrderItemToPrepare,
+    Ingredient,
   },
   mixins: [sharedVueStuff], // include stuff that is used in both
                             //the ordering system and the kitchen
