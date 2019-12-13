@@ -37,8 +37,6 @@ CHECKLIST
 /////
 
 Prioriterat:
-[ ] Rätt funktion i knapparna
-[ ] Lista i myburger
 [ ] Lista i Kitchen (dela upp efter kategori)
 [ ] Se och uppdatera lagerstatus i kitchenview
 [X] Anpassar efter skärmstorlek
@@ -46,29 +44,21 @@ Prioriterat:
 
 Beställning:
 - [ ] Redigering i beställningslista
-      kunna ta bort ingrediens och att flera av samma representeras av en siffra.
-- [x] My burger/beställningssammanfattning till höger
-- [ ] fixa det tillen lista (vad en lagt till i sin beställning)
-- [X] Uppdelning av kategorierna med tillhörande knappar
+      kunna ta bort ingrediens
+- [ ] Att flera av samma i beställnignen representeras av en siffra.
 - [ ] Snygga till så alternativen ser ut som vi ville (layout)
 - [ ] Se till så en inte kan beställa mer än det finns i lager, även
       att de saker som är noll i lager ej syns
-- [x] Kunna ta bort ingrediens där man har tryck för den  
-      minus/plus på ingrediens
 - [ ]Fixa knapparna så de fungerar felfritt
-- [X] Att bara den kategorin man tryckt på syns i taget
 - [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg osv. försvinna.
 - [ ] Se till så att man hamnar i rätt kategori när sidan startar
-- [X] Även knapparna "bröd,burgare,pålägg" ska byta språk när man klickar på knappen.
       Bör vi lägga till ett nytt  objekt i ui_en och ui_sv för det?
-- [x] Fixa så rätt antal försvinner ut lagret
 - [ ] Kan inte lägga tom order
 - [ ] Startfönster
 - [ ] Tack för  din beställning, detta är ditt ordernummer-fönster
 - [ ]
 
 Kök:
-- [x] Grid på beställningen, så de hamnar i en lista
 - [ ] Fixa inne i grid, så det delas upp efter kategori
 - [Sanna, lagt till saker, men funkar ej] Undo färdig order
 - [ ] Inventory
