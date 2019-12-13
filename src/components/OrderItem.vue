@@ -48,7 +48,7 @@ export default {
 <style scoped>
 .orderWrapper{
 	display: grid;
-	grid-template-columns: 25% 25% 25% 25% ;
+	grid-template-columns: 10% 40% 30% 25% ;
 }
 
 .box {
