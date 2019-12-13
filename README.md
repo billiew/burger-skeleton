@@ -47,7 +47,7 @@ Prioriterat:
 
 
 Beställning:
-- [Väntar på video-instruktion deån Mikael] Att flera av samma i beställnignen representeras av en siffra.
+- [Väntar på video-instruktion från Mikael] Att flera av samma i beställnignen representeras av en siffra.
 - [X] Se till så en inte kan beställa mer än det finns i lager
 - [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg osv. försvinna.
 - [ ] Se till så att man hamnar i rätt kategori när sidan startar
