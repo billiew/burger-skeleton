@@ -57,6 +57,7 @@ Beställning:
 - [ ] Startfönster
 - [ ] Tack för  din beställning, detta är ditt ordernummer-fönster
 - [ ] Om man lagt till tex bröd och lägger till pålägg, för att sen gå tillbaka till bröd så står det 0 på det bröd man lagt till.
+- [ ] Ändra färg på knapp när man klickat på den.
 
 Kök:
 - [X] Fixa inne i grid, så det delas upp efter kategori
