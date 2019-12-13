@@ -29,7 +29,7 @@ Notice how the template is using two different components Ingredient and OrderIt
 Try to read the code and figure out how things are connected. One special file, which is important to pay attention to is sharedVueStuff.js in components. This contains code that is used both in Ordering.vue and Kitchen.vue, which is read in as a mixin. This complicates the structure a bit but is a nifty way of keeping code duplication low.
 
 FRÅGOR:
-- Change stock?
+
 
 - Varför måste man uppdatera sidan en eller flera (kitchen) gånger för att text mm ska visas?
 - Varför återställs antalet ingredienser när man hoppar mellan kategorier?
@@ -40,13 +40,11 @@ CHECKLIST
 /////
 
 Prioriterat:
-[ ] Se och uppdatera lagerstatus i kitchenview
 [X] Anpassar efter skärmstorlek
 
 
 Beställning:
 - [Billie - Väntar på video-instruktion från Mikael] Att flera av samma i beställnignen representeras av en siffra.
-- [ ]Fixa knapparna så de fungerar felfritt
 - [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg osv. försvinna.
 - [ ] Se till så att man hamnar i rätt kategori när sidan startar
 - [ ] Startfönster
@@ -54,9 +52,7 @@ Beställning:
 - [ ] Om man lagt till tex bröd och lägger till pålägg, för att sen gå tillbaka till bröd så står det 0 på det bröd man lagt till.
 
 Kök:
-- [X] Fixa inne i grid, så det delas upp efter kategori
-- [X] Undo färdig order
-- [ ] Inventory
+
 
 Lågprioriterat:
 - [ ] Snygga till knapparna
