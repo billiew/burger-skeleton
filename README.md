@@ -31,6 +31,8 @@ Try to read the code and figure out how things are connected. One special file, 
 FRÅGOR:
 - Varför måste man uppdatera sidan en eller flera (kitchen) gånger för att text mm ska visas?
 - Varför funkar inte Undo knappen?
+- Varför återställs antalet ingredienser när man hoppar mellan kategorier?
+- change stock?
 
 CHECKLIST
 /////
@@ -62,7 +64,7 @@ Kök:
 Lågprioriterat:
 - [ ] Kategorier i lagerstatusen i kitchenview
 - [ ] Snygga till knapparna
-- [ ]- [ ] Snygga till så alternativen ser ut som vi ville (layout)
+- [ ]Snygga till så alternativen ser ut som vi ville (layout)
 - [ ] Redigering i beställningslista
       kunna ta bort ingrediens
 
