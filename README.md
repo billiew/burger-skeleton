@@ -36,6 +36,14 @@ FRÅGOR:
 CHECKLIST
 /////
 
+Prioriterat:
+[ ] Rätt funktion i knapparna
+[ ] Lista i myburger
+[ ] Lista i Kitchen (dela upp efter kategori)
+[ ] Se och uppdatera lagerstatus i kitchenview
+[ ] Anpassar efter skärmstorlek
+
+
 Beställning:
 - [ ] Redigering i beställningslista
       kunna ta bort ingrediens och att flera av samma representeras av en siffra.
