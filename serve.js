@@ -58,6 +58,10 @@ io.on('connection', function (socket) {
     data.markOrderDone(orderId);
     io.emit('currentQueue', {orders: data.getAllOrders() });
   });
+  socket.on('orderUndo', function (orderId) {
+    data.markOrderUndo(orderId);
+    io.emit('currentQueue', {orders: data.getAllOrders() });
+  });
 
   socket.on('orderStarted', function (orderId) {
     data.markOrderStarted(orderId);
