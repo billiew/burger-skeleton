@@ -4,6 +4,7 @@
   <div>
     <button id="mybutton" v-on:click="changeView('que')"> <h1>{{ uiLabels.ordersInQueue }}</h1> </button>
     <button id="mybutton" v-on:click="changeView('finished')"> <h1>{{ uiLabels.ordersFinished }}</h1> </button>
+    <button id="mybutton" v-on:click="changeView('productStock')"> <h1>{{ uiLabels.productsInStock }}</h1> </button>
   </div>
   <div id="kitchenorders">
     <div v-if="view==='que'">
@@ -38,6 +39,9 @@
     </OrderItem>
   </div>
 </div>
+  <div v-if="view==='productStock'">
+    hej
+  </div>
 </div>
 </div>
 </template>
