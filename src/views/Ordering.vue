@@ -137,11 +137,11 @@ export default {
 }
 
 #placeOrderButton{
-  position:absolute;
-  bottom:20px;
-  right:30px;
-  font-size: 4vh;
-  padding: 2vh;
+  position:fixed;
+  bottom:2%;
+  right:3%;
+  font-size: 100%;
+  padding: 2%;
   background-color: #4CAF50;
   border-color: #000000;
   border-radius: 10px;
@@ -150,6 +150,7 @@ export default {
 #placeOrderText{
   background-color: #87CEFA;
   border-radius: 10px;
+  font-size: 130%;
 }
 #PlaceOrderSection{
   background-color:  	#ADD8E6;
@@ -161,26 +162,30 @@ export default {
   display: grid;
   grid-template-columns: auto auto auto auto;
   padding: 1em;
+
 }
 
 .menu2{
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 33% 33% 33%;
+  height: 20%;
   padding: 1em;
+
 }
 
 .wrapper{
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: auto 40vh;
-  padding: 2em;
+  grid-gap: 1%;
+  grid-template-columns: 80% 20%;
+  padding: 3%;
 }
 
 .wrapper2{
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: auto auto auto auto;
+  grid-gap: 5%;
+  grid-template-columns: 30% 30% 30% ;
   padding: 1em;
+
 }
 
 .example-panel {
