@@ -23,7 +23,6 @@
         v-if="item.category===currentCategory"
         v-on:increment="addToOrder(item)"
         v-on:decrement="removeFromOrder(item)"
-        v-bind:item="item"
         :item="item"
         :lang="lang"
         :key="item.ingredient_id">
