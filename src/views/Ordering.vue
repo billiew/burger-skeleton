@@ -30,7 +30,7 @@
     </div>
     <div id="PlaceOrderSection">
       <h1 id="placeOrderText">{{ uiLabels.order }}</h1>
-      <div v-for="item in chosenIngredients">
+      <div v-for="item in chosenIngredients" :key="item.ingredient_id">
         {{ item["ingredient_"+lang] }}
       </div>
       <div>

@@ -41,7 +41,7 @@
 </div>
   <div v-if="view==='productStock'">
     <h1>{{ uiLabels.productsInStock }}</h1>
-    <div class="menu">
+    <div>
       <button id="mybutton" v-on:click="setCategory(1)"> {{ uiLabels.patty }} </button>
       <button id="mybutton" v-on:click="setCategory(4)"> {{ uiLabels.bread }} </button>
       <button id="mybutton" v-on:click="setCategory(2)"> {{ uiLabels.addon }} </button>
