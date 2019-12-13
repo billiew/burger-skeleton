@@ -96,13 +96,13 @@ export default {
       let removeIndex = 0;
      for (let i = 0; i < this.chosenIngredients.length; i += 1 ) {
        if (this.chosenIngredients[i] === item) {
-         removeIndex = i;
+         this.chosenIngredients.splice(i, 1);
+         if (this.price>0){
+         this.price -= +item.selling_price;
          break;
        }
      }
-     this.chosenIngredients.splice(removeIndex, 1);
-     if (this.price>0){
-     this.price -= +item.selling_price;
+
    }
 
 
