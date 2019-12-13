@@ -36,7 +36,7 @@
       <div>
         {{ price }} kr
       </div>
-      <button id="placeOrderButton" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
+      <button :disabled="(chosenIngredients.length==0)?true:false" id="placeOrderButton" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
     </div>
   </div>
 
