@@ -57,7 +57,7 @@ Beställning:
 - [ ] Startfönster
 - [ ] Tack för  din beställning, detta är ditt ordernummer-fönster
 - [ ] Om man lagt till tex bröd och lägger till pålägg, för att sen gå tillbaka till bröd så står det 0 på det bröd man lagt till.
-- [X] Ändra färg på knapp när man klickat på den.
+- [Sanna] Ändra färg på knapp beroende på vilken avdelning man är i (just nu ändras bara färg om man klickat på en knapp, men färger försvinner om man klickar någon annanstans på sidan)
 - [ ] Lägga till footer eller padding, så att sidan inte tvärt tar slut
 
 Kök:
@@ -72,6 +72,7 @@ Lågprioriterat:
 - [ ] Redigering i beställningslista
       kunna ta bort ingrediens
 - [ ] de ingredienser som inte finns i lager ska försvinna ur ordering view
+- [ ] Ordna de olika kategorierna på "rätt" ställe under Hamburger. (Tex så patty kommer först, sen bröd osv)
 
 
 Bra länkar att läsa vidare på:
