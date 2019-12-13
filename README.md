@@ -30,7 +30,6 @@ Try to read the code and figure out how things are connected. One special file, 
 
 FRÅGOR:
 - Change stock?
-- Varför funkar inte Undo knappen?
 
 - Varför måste man uppdatera sidan en eller flera (kitchen) gånger för att text mm ska visas?
 - Varför återställs antalet ingredienser när man hoppar mellan kategorier?
@@ -57,7 +56,7 @@ Beställning:
 
 Kök:
 - [X] Fixa inne i grid, så det delas upp efter kategori
-- [Sanna, lagt till saker, men funkar ej] Undo färdig order
+- [X] Undo färdig order
 - [ ] Inventory
 
 Lågprioriterat:
