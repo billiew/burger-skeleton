@@ -41,7 +41,6 @@ CHECKLIST
 /////
 
 Prioriterat:
-[ ] Lista i Kitchen (dela upp efter kategori)
 [ ] Se och uppdatera lagerstatus i kitchenview
 [X] Anpassar efter skärmstorlek
 
