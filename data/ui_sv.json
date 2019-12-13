@@ -8,7 +8,7 @@
   "newOrder" : "Ny beställning",
   "pay" : "Betala",
   "sum" :"Summa",
-  "productsInStock" : "Lagerststus",
+  "productsInStock" : "Lagerstatus",
   "ordersFinished" : "Färdiga beställningar",
   "ordersInQueue" : "Beställningar att förbereda",
   "ordersTrending" : "Populära beställningar",
@@ -23,5 +23,6 @@
   "patty": "Burgare",
   "addon": "Pålägg",
   "sauce": "Sås",
-  "drinks": "Drycker"
+  "drinks": "Drycker",
+  "instock": "st i lager"
 }
