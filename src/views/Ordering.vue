@@ -6,6 +6,7 @@
       <button id="mybutton" v-on:click="setCategory(1)"> <img src="@/assets/burger.png" height="50"> </button>
       <button id="mybutton" v-on:click="setCategory(6)"><img src="@/assets/soda.png" height="50"> </button>
       <button id="mybutton" v-on:click="setCategory(5)"> <img src="@/assets/fries.png" height="60"></button>
+      <button id="mybutton" v-on:click="reload()"> cancel </button>
     </div>
     <div class="menu">
       <button id="mybutton" v-on:click="setCategory(1)"> {{ uiLabels.patty }} </button>
@@ -97,20 +98,16 @@ export default {
       this.price += +item.selling_price;
     },
     removeFromOrder: function (item) {
-     for (let i = 0; i < this.chosenIngredients.length; i += 1 ) {
-       if (this.chosenIngredients[i] === item) {
-         this.chosenIngredients.splice(i, 1);
-         if (this.price>0){
-         this.price -= +item.selling_price;
-         break;
-       }
-     }
-
-   }
-
-
+      for (let i = 0; i < this.chosenIngredients.length; i += 1 ) {
+        if (this.chosenIngredients[i] === item) {
+          this.chosenIngredients.splice(i, 1);
+          if (this.price>0){
+            this.price -= +item.selling_price;
+            break;
+          }
+        }
+      }
     },
-
     placeOrder: function () {
       var i,
       //Wrap the order in an object
@@ -126,6 +123,13 @@ export default {
       }
       this.price = 0;
       this.chosenIngredients = [];
+    },
+    reload(){
+      var location = this.$route.fullPath
+
+      this.$router.replace('/')
+
+      this.$nextTick(() => this.$router.replace(location))
     }
   }
 }
@@ -169,7 +173,7 @@ export default {
 
 .menu2{
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: auto auto auto auto;
   height: 20%;
   padding: 1em;
 

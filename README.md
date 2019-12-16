@@ -51,6 +51,7 @@ Beställning:
 - [ ] Tack för din beställning, detta är ditt ordernummer-fönster
 - [ ] Om man lagt till tex bröd och lägger till pålägg, för att sen gå tillbaka till bröd så står det 0 på det bröd man lagt till.
 - [ ] Dela upp Beställningen (den på höger sida) i Hamburgare, Dryck och Tillbehör (så som det är uppdelat i Kitchen)
+- [ ] Lägg till en cancel-knapp
 
 Kök:
 - [ ] Submit-knappen i Stock ska ändra språk
