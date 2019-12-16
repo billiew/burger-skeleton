@@ -173,7 +173,7 @@ export default {
 
 .menu2{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto 10%;
   height: 20%;
   padding: 1em;
 

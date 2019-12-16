@@ -61,6 +61,7 @@ border-radius: 30px;
 #boldTextItem{
   font-weight: bold;
   font-size: 120%;
+  font-family: arial;
 }
 
 </style>

@@ -23,6 +23,14 @@ let router = new Router({
       component:  () => import(/* webpackChunkName: "read" */ './views/finishedOrder.vue')
     },
     {
+      path: '/startpage',
+      meta: {
+        title: 'Start page',
+      },
+      name: 'Start page',
+      component:  () => import(/* webpackChunkName: "read" */ './views/Welcome.vue')
+    },
+    {
       path: '/kitchen',
       meta: {
         title: 'Kitchen',
