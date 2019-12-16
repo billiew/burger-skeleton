@@ -15,6 +15,14 @@ let router = new Router({
       component: Ordering
     },
     {
+      path: '/finishedOrder',
+      meta: {
+        title: 'Finished order',
+      },
+      name: 'Finished order',
+      component:  () => import(/* webpackChunkName: "read" */ './views/finishedOrder.vue')
+    },
+    {
       path: '/kitchen',
       meta: {
         title: 'Kitchen',

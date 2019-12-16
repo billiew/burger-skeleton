@@ -6,7 +6,7 @@
       <button id="mybutton" v-on:click="setCategory(1)"> <img src="@/assets/burger.png" height="50"> </button>
       <button id="mybutton" v-on:click="setCategory(6)"><img src="@/assets/soda.png" height="50"> </button>
       <button id="mybutton" v-on:click="setCategory(5)"> <img src="@/assets/fries.png" height="60"></button>
-      <button id="mybutton" v-on:click="reload()"> cancel </button>
+      <button id="mybutton" v-on:click="reload()">  {{ uiLabels.cancelOrder }} </button>
     </div>
     <div class="menu">
       <button id="mybutton" v-on:click="setCategory(1)"> {{ uiLabels.patty }} </button>

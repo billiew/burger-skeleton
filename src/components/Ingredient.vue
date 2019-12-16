@@ -2,13 +2,14 @@
   <div class="ingredient">
     <label>
       <span>
-      <button id="orderbuttons" v-on:click="decrementCounter"> <img src="@/assets/negative-sign-button.png" height="15"></button>
-      {{counter}}
-      <button :disabled="(counter>=item.stock)?true:false"  id="orderbuttons"  v-on:click="incrementCounter"> <img src="@/assets/plusbutton.png" height="15"></button>
+        <button id="orderbuttons" v-on:click="decrementCounter"> <img src="@/assets/negative-sign-button.png" height="15"></button>
+        {{counter}}
+        <button :disabled="(counter>=item.stock)?true:false"  id="orderbuttons"  v-on:click="incrementCounter"> <img src="@/assets/plusbutton.png" height="15"></button>
       </span>
-      <br>
-      {{item["ingredient_"+ lang]}}
-      <br>
+      <div id="boldTextItem">
+        <br >
+        {{item["ingredient_"+ lang]}}
+      </div>
       {{item.selling_price}}:-
       <br>{{item.stock}} pcs
     </label>
@@ -21,7 +22,7 @@ export default {
     item: Object,
     lang: String
   },
-    data: function () {
+  data: function () {
     return {
       counter: 0
     };
@@ -53,9 +54,13 @@ export default {
 <style scoped>
 
 /*#orderbuttons{
-  padding:5px;
-  border-radius: 30px;
+padding:5px;
+border-radius: 30px;
 }
 */
+#boldTextItem{
+  font-weight: bold;
+  font-size: 120%;
+}
 
 </style>
