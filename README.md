@@ -44,19 +44,25 @@ Prioriterat:
 
 
 Beställning:
-- [Billie - Väntar på video-instruktion från Mikael] Att flera av samma i beställnignen representeras av en siffra.
-- [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg osv. försvinna.
+- [ ] Ikoner för laktos/gluten/vegan
+- [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg  
+      osv. försvinna.
 - [ ] Se till så att man hamnar i rätt kategori när sidan startar
 - [ ] Startfönster
 - [ ] Tack för din beställning, detta är ditt ordernummer-fönster
-- [ ] Om man lagt till tex bröd och lägger till pålägg, för att sen gå tillbaka till bröd så står det 0 på det bröd man lagt till.
-- [ ] Dela upp Beställningen (den på höger sida) i Hamburgare, Dryck och Tillbehör (så som det är uppdelat i Kitchen)
+- [ ] Om man lagt till tex bröd och lägger till pålägg, för att sen gå
+      tillbaka till bröd så står det 0 på det bröd man lagt till.
+- [ ] Dela upp Beställningen (den på höger sida) i Hamburgare, Dryck och       
+      Tillbehör (så som det är uppdelat i Kitchen)
 - [ ] Lägg till en cancel-knapp
 
 Kök:
 - [ ] Submit-knappen i Stock ska ändra språk
+- [ ] Att flera av samma i beställnignen representeras av en siffra.
+- [ ] Att när man uppdaterar stock så försvinner inte beställningarna
 
 Lågprioriterat:
+- [ ] Filtrering för laktos/gluten/vegan
 - [ ] Snygga till knapparna
 - [ ] Snygga till så alternativen ser ut som vi ville (layout)
 - [ ] Redigering i beställningslista
