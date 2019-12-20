@@ -25,6 +25,7 @@
         v-if="item.category===currentCategory"
         v-on:increment="addToOrder(item)"
         v-on:decrement="removeFromOrder(item)"
+        v-bind:counter="ingredientCount(item)"
         :item="item"
         :lang="lang"
         :key="item.ingredient_id">
@@ -32,8 +33,8 @@
     </div>
     <div id="PlaceOrderSection">
       <h1 id="placeOrderText">{{ uiLabels.order }}</h1>
-      <div v-for="item in chosenIngredients" :key="item.ingredient_id">
-        {{ item["ingredient_"+lang] }}
+      <div v-for="item in groupIngredients(chosenIngredients)" :key="item.ingredient_id">
+        {{item.count}} x {{ item.ing['ingredient_' + lang] }}
       </div>
       <div>
         {{ price }} :-
@@ -91,6 +92,14 @@ export default {
     }.bind(this));
   },
   methods: {
+    ingredientCount: function (item) {
+      let counter = 0;
+      for(let i = 0; i < this.chosenIngredients.length; i += 1) {
+        if (this.chosenIngredients[i] === item)
+          counter += 1;
+      }
+      return counter;
+    },
     setCategory: function (cat) {
       this.currentCategory = cat;
     },
@@ -144,7 +153,7 @@ export default {
 }
 
 #placeOrderButton{
-  position:fixed;
+  position:absolute;
   bottom:2%;
   right:3%;
   font-size: 100%;
@@ -162,6 +171,7 @@ export default {
 #PlaceOrderSection{
   background-color:  	#ADD8E6;
   border-radius: 8px;
+  height: 450px;
 
 }
 
