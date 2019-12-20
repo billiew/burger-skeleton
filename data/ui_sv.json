@@ -10,7 +10,7 @@
   "sum" :"Summa",
   "productsInStock" : "Lagerstatus",
   "changeStock": "Ändra lagerstatus",
-  "order": "Order",
+  "order": "Beställning",
   "ordersFinished" : "Färdiga beställningar",
   "ordersInQueue" : "Beställningar att förbereda",
   "ordersTrending" : "Populära beställningar",

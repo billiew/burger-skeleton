@@ -1,6 +1,7 @@
 <template>
 <div id="orders">
-  <button v-on:click="switchLang()">{{ uiLabels.language }}</button>
+  <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
+  <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
   <div>
     <button id="mybutton" v-on:click="changeView('que')"> <h1>{{ uiLabels.ordersInQueue }}</h1> </button>
     <button id="mybutton" v-on:click="changeView('finished')"> <h1>{{ uiLabels.ordersFinished }}</h1> </button>

@@ -10,7 +10,7 @@
   "sum": "Sum",
   "productsInStock" : "Stock",
   "changeStock": "Change stock",
-  "order": "Beställning",
+  "order": "Order",
   "ordersFinished" : "Finished orders",
   "ordersInQueue" : "Order queue",
   "ordersTrending" : "Trending orders",

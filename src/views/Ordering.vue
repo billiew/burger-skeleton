@@ -1,7 +1,8 @@
 <template>
   <div id="ordering">
     <img class="example-panel" src="@/assets/bubbles.jpg">
-    <button v-on:click="switchLang()">{{ uiLabels.language }}</button>
+    <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
+    <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
     <div class="menu2">
       <button id="mybutton" v-on:click="setCategory(1)"> <img src="@/assets/burger.png" height="50"> </button>
       <button id="mybutton" v-on:click="setCategory(6)"><img src="@/assets/soda.png" height="50"> </button>
