@@ -3,7 +3,7 @@
       <label for="ingredient">{{item["ingredient_"+ lang]}}<br>
         {{item.stock}}
         <input v-model="newStock" type="number" id="ingredient" name="n">
-        <button v-on:click="changeStock"> Submit </button>
+        <button v-on:click="changeStock"> Submit </button> <!-- här kunna använda uiLabels -->
       <hr>
     </label>
 </div>

@@ -37,7 +37,8 @@
         {{item.count}} x {{ item.ing['ingredient_' + lang] }}
       </div>
       <div>
-        {{ price }} :-
+        <br>
+        {{ uiLabels.sum }} : {{ price }} :-
       </div>
       <button :disabled="(chosenIngredients.length==0)?true:false" id="placeOrderButton" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
     </div>

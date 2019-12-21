@@ -11,7 +11,7 @@
         {{item["ingredient_"+ lang]}}
       </div>
       {{item.selling_price}}:-
-      <br>{{item.stock}} pcs
+      <br>{{item.stock}} pcs   <!-- här kunna använda uiLabels -->
     </label>
   </div>
 </template>

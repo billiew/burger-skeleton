@@ -33,6 +33,8 @@ FRÅGOR:
 
 - Varför måste man uppdatera sidan en eller flera (kitchen) gånger för att text mm ska visas?
 - Varför återställs antalet ingredienser när man hoppar mellan kategorier?
+- Hur kan vi använda UI-labels under mappen components så att tex knappen submit i kitchen
+  eller pcs kan ändra språk?
 
 (-dölja ingredienser som inte finns i lager?)
 
