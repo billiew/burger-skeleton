@@ -18,7 +18,6 @@
     <div  class="wrapper">
 
       <div class="wrapper2">
-        <!-- <h1>{{ uiLabels.ingredients }}</h1> -->
         <Ingredient
         ref="ingredient"
         v-for="item in ingredients"
@@ -219,6 +218,7 @@ export default {
   border: 1px solid #ccd;
   padding: 1em;
   background-color: rgb(190, 210, 255);
+  height: 7em;
 }
 
 #mybutton{
