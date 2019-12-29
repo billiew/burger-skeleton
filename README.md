@@ -43,6 +43,7 @@ CHECKLIST
 
 Prioriterat:
 - [ ] Anpassar efter skärmstorlek (någorlunda bra nu men måste vara bättre)
+Christine fixar 2019-12-29
 
 
 Beställning:
@@ -51,7 +52,9 @@ Beställning:
       osv. försvinna.
 - [ ] Se till så att man hamnar i rätt kategori när sidan startar
 - [ ] Startfönster
+Christine fixar 2019-12-29
 - [ ] Tack för din beställning, detta är ditt ordernummer-fönster
+Christine fixar 2019-12-29
 - [ ] Om man lagt till tex bröd och lägger till pålägg, för att sen gå
       tillbaka till bröd så står det 0 på det bröd man lagt till.
 - [ ] Dela upp Beställningen (den på höger sida) i Hamburgare, Dryck och       
