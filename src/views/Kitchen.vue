@@ -57,6 +57,7 @@
         v-for="item in ingredients" onloadedmetadata=""
         :item="item"
         :lang="lang"
+        :ui-labels="uiLabels"
         :key="item.ingredient_id">
     </IngredientStock>
     </div>

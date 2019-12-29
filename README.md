@@ -65,9 +65,9 @@ Christine fixar 2019-12-29
 - [ ] Lägg till en cancel-knapp
 
 Kök:
-- [ ] Submit-knappen i Stock ska ändra språk
 - [ ] Att flera av samma i beställnignen representeras av en siffra.
 - [ ] Att när man uppdaterar stock så försvinner inte beställningarna
+      (Nu måste man uppdatera sidan för att se beställningarna igen)
 
 Lågprioriterat:
 - [ ] Filtrering för laktos/gluten/vegan
