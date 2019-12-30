@@ -20,7 +20,12 @@ http://localhost:8080/#/
 
 http://localhost:8080/#/kitchen
 
+<<<<<<< HEAD
 För att komma till startsidan:
+=======
+Start page added:
+
+>>>>>>> 2ab3865ec4bb7028d16fc8e419b22d9e2ebc92bd
 http://localhost:8080/#/startpage
 
 ### Start looking at the code
