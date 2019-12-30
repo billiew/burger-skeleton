@@ -6,7 +6,8 @@
     <div  class="wrapper">
 
       <button><h1>{{uiLabels.newOrder}}</h1></button>
-            <p>{{uiLabels.welcome}}</p>
+      <br></br>
+            <h2><center>{{uiLabels.welcome}}</center></h2>
   </div>
 </div>
 </template>
