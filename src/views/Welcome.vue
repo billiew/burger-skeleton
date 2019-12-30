@@ -3,14 +3,17 @@
     <img class="example-panel" src="@/assets/bubbles.jpg">
     <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
     <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
-    <div  class="wrapper">
+    <div class="wrapper">
 
-      <button><h1>{{uiLabels.newOrder}}</h1></button>
+      <button v-on:click="changePage()"><h1>{{uiLabels.newOrder}}</h1></button>
       <br></br>
             <h2><center>{{uiLabels.welcome}}</center></h2>
   </div>
 </div>
 </template>
+<script>
+</script>
+
 <script>
 
 //import the components that are used in the template, the name that you
@@ -46,6 +49,10 @@ export default {
     }.bind(this));
   },
   methods: {
+    changePage: function(item) {
+      this.$router.push('/');
+      this.$router.go();
+    },
     ingredientCount: function (item) {
       let counter = 0;
       for(let i = 0; i < this.chosenIngredients.length; i += 1) {
