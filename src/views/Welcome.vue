@@ -4,7 +4,9 @@
     <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
     <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
     <div  class="wrapper">
+
       <button><h1>{{uiLabels.newOrder}}</h1></button>
+            <p>{{uiLabels.welcome}}</p>
   </div>
 </div>
 </template>

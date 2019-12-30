@@ -26,5 +26,6 @@
   "sauce": "Sauce",
   "drinks": "Drinks",
   "instock": "pcs in stock",
-  "hamburger": "Hamburger"
+  "hamburger": "Hamburger",
+  "welcome" : "Welcome to Crafty Burgers! You build your own burger by choosing all components by yourself. Enjoy!"
 }
