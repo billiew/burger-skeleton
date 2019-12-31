@@ -2,30 +2,18 @@
 <div id="orders">
   <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
   <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
-  <div>
-    <button id="mybutton" v-on:click="changeView('que')"> <h1>{{ uiLabels.ordersInQueue }}</h1> </button>
+  <div class="wrapper">
+          <h2><center>{{uiLabels.thankOrder}}</center></h2>
 
+    <br></br>
+    <button v-on:click="changePage()"><h1>{{uiLabels.newOrder}}</h1></button>
   </div>
-  <div id="kitchenorders">
-    <div v-if="view==='que'">
 
-    <div class="wrapper">
-        <OrderItemToPrepare
 
-        class="orderitemtoprepare"
-        v-for="(order,key) in orders"
-        v-on:done="markDone(key)"
 
-        :order-id="key"
-        :order="order"
-        :ui-labels="uiLabels"
-        :lang="lang"
-        :key="key">
-      </OrderItemToPrepare>
-    </div>
-  </div>
-  </div>
 </div>
+
+
 </template>
 <script>
 import OrderItem from '@/components/OrderItem.vue'
@@ -54,6 +42,10 @@ export default {
     }
   },
   methods: {
+    changePage: function(item) {
+      this.$router.push('/startpage');
+
+    },
     setCategory: function (cat) {
       this.currentCategory = cat;
     },
