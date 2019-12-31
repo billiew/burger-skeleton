@@ -14,7 +14,7 @@
         <OrderItemToPrepare
         v-if="order.status !== 'done'"
         class="orderitemtoprepare"
-        v-for="(order, key) in orders"
+        v-for="(order,key) in orders"
         v-on:done="markDone(key)"
         :order-id="key"
         :order="order"

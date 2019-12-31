@@ -3,20 +3,20 @@
 		<span class="box ordernumb"><b>{{uiLabels.order}}: #{{orderId}}</b></span>
 		<div class="box burger">
 			{{order.type}}<b>{{uiLabels.hamburger}}:</b>
-			<div v-for="item in order.ingredients" :key="item.ingredient_id">
-				<span v-if="item.category<5">{{ item["ingredient_"+lang] }}</span>
+			<div v-for="item in groupIngredients(order.ingredients)" >
+				<span v-if="item.ing.category<5">{{item.count}} x {{ item.ing['ingredient_' + lang] }}</span>
 			</div>
 		</div>
 		<div class="box drink">
 			{{order.type}} <b>{{uiLabels.drinks}}:</b>
-			<div v-for="item in order.ingredients" :key="item.ingredient_id">
-				<span v-if="item.category===6">{{ item["ingredient_"+lang] }}</span>
+			<div v-for="item in groupIngredients(order.ingredients)">
+				<span v-if="item.ing.category===6">{{item.count}} x {{ item.ing['ingredient_' + lang] }}</span>
 			</div>
 		</div>
 		<div class="box sides">
 			{{order.type}} <b>{{uiLabels.sideorders}}:</b>
-			<div v-for="item in order.ingredients" :key="item.ingredient_id">
-				<span v-if="item.category===5">{{ item["ingredient_"+lang] }}</span>
+			<div v-for="item in groupIngredients(order.ingredients)">
+				<span v-if="item.ing.category===5">{{item.count}} x {{ item.ing['ingredient_' + lang] }}</span>
 			</div>
 		</div>
 		<div v-if="order.status==='done'">
@@ -41,7 +41,23 @@ export default {
 			// can catch it with v-on:done in the component declaration
 			this.$emit('undo', this.orderId);
 			//this.$store.state.socket.emit('orderUndo', this.orderId);
-		}
+		},
+		groupIngredients(ingredients) {
+      let grouped = []
+      for (let i = 0; i < ingredients.length; i += 1) {
+        let newIngredient = true
+        for (let j = 0; j < grouped.length; j += 1) {
+          if (ingredients[i].ingredient_id === grouped[j].ing.ingredient_id) {
+            grouped[j].count += 1;
+            newIngredient = false;
+            break;
+          }
+        }
+        if (newIngredient)
+          grouped.push({ing: ingredients[i], count: 1})
+      }
+      return grouped;
+    }
 	}
 }
 </script>

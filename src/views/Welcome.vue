@@ -6,7 +6,6 @@
     <div class="wrapper">
 
       <button v-on:click="changePage()"><h1>{{uiLabels.newOrder}}</h1></button>
-      <br></br>
             <h2><center>{{uiLabels.welcome}}</center></h2>
   </div>
 </div>
