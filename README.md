@@ -59,8 +59,8 @@ Beställning:
 - [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg  
       osv. försvinna.
 - [ ] Se till så att man hamnar i rätt kategori när sidan startar
-- [ ] Startfönster
-Christine fixar 2019-12-29
+- [x] Startfönster
+Christine fixar 2019-12-29, grundläggande är klart, nu är det bara design kvar.
 - [ ] Tack för din beställning, detta är ditt ordernummer-fönster
 Christine fixar 2019-12-29
 - [ ] Om man lagt till tex bröd och lägger till pålägg, för att sen gå
