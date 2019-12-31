@@ -134,12 +134,9 @@ export default {
       this.price = 0;
       this.chosenIngredients = [];
     },
-    reload(){
-      var location = this.$route.fullPath
-
-      this.$router.replace('/')
-
-      this.$nextTick(() => this.$router.replace(location))
+    reload(item){
+      this.$router.push('startpage');
+      this.$router.go();
     }
   }
 }

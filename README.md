@@ -67,10 +67,9 @@ Christine fixar 2019-12-29
       tillbaka till bröd så står det 0 på det bröd man lagt till.
 - [ ] Dela upp Beställningen (den på höger sida) i Hamburgare, Dryck och       
       Tillbehör (så som det är uppdelat i Kitchen)
-- [ ] Lägg till en cancel-knapp
+- [ ] Cancel-knapp gör så det hoppar tillbaka till Startpage
 
 Kök:
-- [ ] Att flera av samma i beställnignen representeras av en siffra.
 - [ ] Att när man uppdaterar stock så försvinner inte beställningarna
       (Nu måste man uppdatera sidan för att se beställningarna igen)
 
