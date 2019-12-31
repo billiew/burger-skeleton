@@ -28,6 +28,8 @@ Start page added:
 >>>>>>> 2ab3865ec4bb7028d16fc8e419b22d9e2ebc92bd
 http://localhost:8080/#/startpage
 
+För att komma till bekräftelsesidan:
+http://localhost:8080/#/finishedOrder
 ### Start looking at the code
 
 Start at Ordering.vue in the folder views. You will notice that the code is a structured a bit differently than in the lab. Instead of separating code by language type (HTML, CSS, and JS), it is now separated by page or component so that, for instance, all CSS that is specific for a component is placed in the same .vue file as the HTML and the Vue JS scripts. This makes it easier to manage larger projects that will contain thousands of lines of code.
