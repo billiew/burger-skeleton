@@ -4,18 +4,18 @@
   <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
   <div>
     <button id="mybutton" v-on:click="changeView('que')"> <h1>{{ uiLabels.ordersInQueue }}</h1> </button>
-    <button id="mybutton" v-on:click="changeView('finished')"> <h1>{{ uiLabels.ordersFinished }}</h1> </button>
-    <button id="mybutton" v-on:click="changeView('productStock')"> <h1>{{ uiLabels.productsInStock }}</h1> </button>
+
   </div>
   <div id="kitchenorders">
     <div v-if="view==='que'">
-    <h1>{{ uiLabels.ordersInQueue }}</h1>
+
     <div class="wrapper">
         <OrderItemToPrepare
-        v-if="order.status !== 'done'"
+
         class="orderitemtoprepare"
         v-for="(order,key) in orders"
         v-on:done="markDone(key)"
+
         :order-id="key"
         :order="order"
         :ui-labels="uiLabels"
@@ -24,44 +24,6 @@
       </OrderItemToPrepare>
     </div>
   </div>
-  <div v-if="view==='finished'">
-    <h1>{{ uiLabels.ordersFinished }}</h1>
-    <div class="wrapper2">
-      <OrderItem
-      class="orderitem"
-      v-if="order.status === 'done'"
-      v-for="(order, key) in orders"
-      v-on:undo="markUndo(key)"
-      :order-id="key"
-      :order="order"
-      :lang="lang"
-      :ui-labels="uiLabels"
-      :key="key">
-    </OrderItem>
-  </div>
-</div>
-  <div v-if="view==='productStock'">
-    <h1>{{ uiLabels.productsInStock }}</h1>
-    <div>
-      <button id="mybutton" v-on:click="setCategory(1)"> {{ uiLabels.patty }} </button>
-      <button id="mybutton" v-on:click="setCategory(4)"> {{ uiLabels.bread }} </button>
-      <button id="mybutton" v-on:click="setCategory(2)"> {{ uiLabels.addon }} </button>
-      <button id="mybutton" v-on:click="setCategory(3)"> {{ uiLabels.sauce }} </button>
-      <button id="mybutton" v-on:click="setCategory(6)"> {{ uiLabels.drinks }} </button>
-      <button id="mybutton" v-on:click="setCategory(5)"> {{ uiLabels.sideorders }} </button>
-    </div>
-    <div>
-      <IngredientStock
-        ref="ingredientStock"
-        v-if="item.category===currentCategory"
-        v-for="item in ingredients" onloadedmetadata=""
-        :item="item"
-        :lang="lang"
-        :ui-labels="uiLabels"
-        :key="item.ingredient_id">
-    </IngredientStock>
-    </div>
-    </div>
   </div>
 </div>
 </template>
