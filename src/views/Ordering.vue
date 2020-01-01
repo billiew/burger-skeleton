@@ -133,6 +133,9 @@ export default {
       }
       this.price = 0;
       this.chosenIngredients = [];
+
+      this.$router.push('/finishedOrder');
+
     },
     reload(item){
       this.$router.push('startpage');
