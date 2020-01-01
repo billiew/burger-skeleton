@@ -7,7 +7,7 @@
       <button id="mybutton" v-on:click="setCategory(1)"> <img src="@/assets/burger.png" height="50"> </button>
       <button id="mybutton" v-on:click="setCategory(6)"><img src="@/assets/soda.png" height="50"> </button>
       <button id="mybutton" v-on:click="setCategory(5)"> <img src="@/assets/fries.png" height="60"></button>
-      <button id="mybutton" v-on:click="reload()">  {{ uiLabels.cancelOrder }} </button>
+      <button id="mybutton" v-on:click="cancelOrder()">  {{ uiLabels.cancelOrder }} </button>
     </div>
     <div class="menu">
       <button id="mybutton" v-on:click="setCategory(1)"> {{ uiLabels.patty }} </button>
@@ -137,10 +137,10 @@ export default {
       this.$router.push('/finishedOrder');
 
     },
-    reload(item){
-      this.$router.push('startpage');
-      this.$router.go();
-    }
+    cancelOrder: function() {
+      this.$router.push('/startpage');
+
+    },
   }
 }
 </script>
@@ -218,7 +218,7 @@ export default {
   border: 1px solid #ccd;
   padding: 1em;
   background-color: rgb(190, 210, 255);
-  height: 7em;
+  height: 9em;
 }
 
 #mybutton{

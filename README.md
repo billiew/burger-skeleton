@@ -57,7 +57,6 @@ Christine fixar 2019-12-29
 
 
 Beställning:
-- [ ] Ikoner för laktos/gluten/vegan
 - [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg  
       osv. försvinna.
 - [ ] Se till så att man hamnar i rätt kategori när sidan startar

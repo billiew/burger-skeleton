@@ -5,7 +5,7 @@
   <div class="wrapper">
           <h2><center>{{uiLabels.thankOrder}}</center></h2>
 
-    <br></br>
+    <br>
     <button v-on:click="changePage()"><h1>{{uiLabels.newOrder}}</h1></button>
   </div>
 
@@ -42,8 +42,8 @@ export default {
     }
   },
   methods: {
-    changePage: function(item) {
-      this.$router.push('/startpage');
+    changePage: function() {
+      this.$router.push('/');
 
     },
     setCategory: function (cat) {

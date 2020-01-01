@@ -7,11 +7,22 @@
         <button :disabled="(counter>=item.stock)?true:false"  id="orderbuttons"  v-on:click="incrementCounter"> <img src="@/assets/plusbutton.png" height="30"></button>
       </span>
       <div id="boldTextItem">
-        <br >
+        <br>
         {{item["ingredient_"+ lang]}}
       </div>
+      <span v-if="item.vegan===1">
+        <img src="@/assets/vegan.png" height="35">
+      </span>
+      <span v-if="item.milk_free===1">
+        <img src="@/assets/lactose-free.png" height="35">
+      </span>
+      <span v-if="item.gluten_free===1">
+        <img src="@/assets/gluten-free.png" height="35">
+      </span>
+      <br>
       {{item.selling_price}}:-
-      <br>{{item.stock}} pcs   <!-- här kunna använda uiLabels -->
+      <br>
+      {{item.stock}} pcs   <!-- här kunna använda uiLabels -->
     </label>
   </div>
 </template>

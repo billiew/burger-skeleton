@@ -3,19 +3,19 @@
 		<span class="box ordernumb"><b>{{uiLabels.order}}: #{{orderId}}</b></span>
 		<div class="box burger">
 			{{order.type}}<b>{{uiLabels.hamburger}}:</b>
-			<div v-for="item in groupIngredients(order.ingredients)" >
+			<div v-for="item in groupIngredients(order.ingredients)" :key="item.ingredient_id">
 				<span v-if="item.ing.category<5">{{item.count}} x {{ item.ing['ingredient_' + lang] }}</span>
 			</div>
 		</div>
 		<div class="box drink">
 			{{order.type}} <b>{{uiLabels.drinks}}:</b>
-			<div v-for="item in groupIngredients(order.ingredients)">
+			<div v-for="item in groupIngredients(order.ingredients)" :key="item.ingredient_id">
 				<span v-if="item.ing.category===6">{{item.count}} x {{ item.ing['ingredient_' + lang] }}</span>
 			</div>
 		</div>
 		<div class="box sides">
 			{{order.type}} <b>{{uiLabels.sideorders}}:</b>
-			<div v-for="item in groupIngredients(order.ingredients)">
+			<div v-for="item in groupIngredients(order.ingredients)" :key="item.ingredient_id">
 				<span v-if="item.ing.category===5">{{item.count}} x {{ item.ing['ingredient_' + lang] }}</span>
 			</div>
 		</div>
