@@ -135,6 +135,7 @@ export default {
       this.chosenIngredients = [];
 
       this.$router.push('/finishedOrder');
+      
 
     },
     cancelOrder: function() {

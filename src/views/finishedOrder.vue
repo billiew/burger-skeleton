@@ -44,6 +44,7 @@ export default {
   methods: {
     changePage: function() {
       this.$router.push('/');
+      this.$router.go();
 
     },
     setCategory: function (cat) {
