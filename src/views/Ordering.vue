@@ -135,7 +135,7 @@ export default {
       this.chosenIngredients = [];
 
       this.$router.push('/finishedOrder');
-      
+
 
     },
     cancelOrder: function() {
@@ -155,24 +155,25 @@ export default {
 
 #placeOrderButton{
   position:absolute;
-  bottom:2%;
-  right:3%;
-  font-size: 100%;
-  padding: 2%;
+  bottom:1em;
+  right:3em;
+  font-size: 1em;
+  padding: 1em;
   background-color: #4CAF50;
   border-color: #000000;
-  border-radius: 10px;
+  border-radius: 1em;
 
 }
 #placeOrderText{
-  background-color: #87CEFA;
-  border-radius: 10px;
-  font-size: 130%;
+  background-color: white;
+  marigin: 3em;
+  border-radius: 0.1em;
+  font-size: 1.3em;
 }
 #PlaceOrderSection{
-  background-color:  	#ADD8E6;
-  border-radius: 8px;
-  height: 450px;
+  background-color:  	rgba(255, 255, 255, 0.9);
+  border-radius: 0em;
+  height: 30em;
 
 }
 
@@ -216,7 +217,7 @@ export default {
 }
 .ingredient {
   text-align: center;
-  border: 1px solid #ccd;
+  border: 1em solid #ccd;
   padding: 1em;
   background-color: rgb(190, 210, 255);
   height: 9em;
