@@ -67,9 +67,6 @@ Beställning:
 - [ ] Dela upp Beställningen (den på höger sida) i Hamburgare, Dryck och       
       Tillbehör (så som det är uppdelat i Kitchen)
 
-Kök:
-- [ ] Att när man uppdaterar stock så försvinner inte beställningarna
-      (Nu måste man uppdatera sidan för att se beställningarna igen)
 
 Lågprioriterat:
 - [ ] Filtrering för laktos/gluten/vegan
@@ -80,7 +77,10 @@ Lågprioriterat:
 - [ ] design av startfönster
 - [ ] göra inköpslistan till en scrollruta (så att allt får plats även om en vill ha en av varje ingrediens)
 
-
+Kök:
+- [ ] Att när man uppdaterar stock så försvinner inte beställningarna
+      (Nu måste man uppdatera sidan för att se beställningarna igen)
+2020-01-03, Vi har testat, inte värt att lägga för mkt tid på
 Bra länkar att läsa vidare på:
 
 Om flikar:
