@@ -53,22 +53,19 @@ CHECKLIST
 
 Prioriterat:
 - [ ] Anpassar efter skärmstorlek (någorlunda bra nu men måste vara bättre)
-Christine fixar 2019-12-29
+- [ ] Fixa designen så att enbart % används och ej tex px
 
 
 Beställning:
 - [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg  
-      osv. försvinna.
-- [ ] Se till så att man hamnar i rätt kategori när sidan startar
-- [x] Startfönster
-Christine fixar 2019-12-29, grundläggande är klart, nu är det bara design kvar.
+      osv. försvinna. Christine och Bea försöker (med v-show 3/1)
+- [ ] Se till så att man hamnar i rätt kategori när sidan startar (förstår ej vad som menas)
 - [ ] Tack för din beställning, detta är ditt ordernummer-fönster
-Christine fixar 2019-12-29
+      Lägg till ordernummer!
 - [ ] Om man lagt till tex bröd och lägger till pålägg, för att sen gå
       tillbaka till bröd så står det 0 på det bröd man lagt till.
 - [ ] Dela upp Beställningen (den på höger sida) i Hamburgare, Dryck och       
       Tillbehör (så som det är uppdelat i Kitchen)
-- [ ] Cancel-knapp gör så det hoppar tillbaka till Startpage
 
 Kök:
 - [ ] Att när man uppdaterar stock så försvinner inte beställningarna
@@ -78,9 +75,10 @@ Lågprioriterat:
 - [ ] Filtrering för laktos/gluten/vegan
 - [ ] Snygga till knapparna
 - [ ] Snygga till så alternativen ser ut som vi ville (layout)
-- [ ] Redigering i beställningslista
-      kunna ta bort ingrediens
+- [ ] Redigering i beställningslista, kunna ta bort ingrediens
 - [ ] de ingredienser som inte finns i lager ska försvinna ur ordering view
+- [ ] design av startfönster
+- [ ] göra inköpslistan till en scrollruta (så att allt får plats även om en vill ha en av varje ingrediens)
 
 
 Bra länkar att läsa vidare på:
