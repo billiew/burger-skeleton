@@ -55,6 +55,8 @@ Prioriterat:
 - [ ] Anpassar efter skärmstorlek (någorlunda bra nu men måste vara bättre)
 - [ ] Fixa designen så att enbart % används och ej tex px
 
+- [ ] fixa så att efter tack för din beställnin, döpa om ny beställning till avsluta och sedan
+      skicka till startpage ist för till beställningssidan :)
 
 Beställning:
 - [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg  

@@ -22,7 +22,7 @@
       <br>
       {{item.selling_price}}:-
       <br>
-      {{item.stock}} pcs   <!-- här kunna använda uiLabels -->
+      {{item.stock}} pcs in stock  <!-- här kunna använda uiLabels -->
     </label>
   </div>
 </template>
