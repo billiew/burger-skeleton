@@ -27,10 +27,6 @@
   "drinks": "Drycker",
   "instock": "st i lager",
   "hamburger": "Hamburgare",
-<<<<<<< HEAD
-  "welcome" : "Välkommen till Crafty Burgers! Du bygger din burgare genom att välja alla burgarens delar själv. Smaklig måltid!",
+  "welcome" : "Välkommen till Crafty Burgers! Du bygger din burgare genom att välja alla burgarens delar separat. Smaklig måltid!",
   "process" : "Avsluta beställning"
-=======
-  "welcome" : "Välkommen till Crafty Burgers! Du bygger din burgare genom att välja alla burgarens delar separat. Smaklig måltid!"
->>>>>>> baa94b31ed49805f3057e863fbe45da030292b6e
 }

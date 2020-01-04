@@ -27,10 +27,6 @@
   "drinks": "Drinks",
   "instock": "pcs in stock",
   "hamburger": "Hamburger",
-<<<<<<< HEAD
-  "welcome" : "Welcome to Crafty Burgers! You build your own burger by choosing all components by yourself. Enjoy!",
+  "welcome" : "Welcome to Crafty Burgers! You build your own burger by choosing all components seperately. Enjoy!",
   "process" : "Exit order"
-=======
-  "welcome" : "Welcome to Crafty Burgers! You build your own burger by choosing all components seperately. Enjoy!"
->>>>>>> baa94b31ed49805f3057e863fbe45da030292b6e
 }
