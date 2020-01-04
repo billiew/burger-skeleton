@@ -173,6 +173,8 @@ export default {
 #PlaceOrderSection{
   background-color:  	rgba(255, 255, 255, 0.9);
   border-radius: 0em;
+  marigin: 5em;
+  border-width: 5em;
   height: 30em;
 
 }
