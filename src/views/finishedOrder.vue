@@ -3,12 +3,13 @@
   <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
   <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
   <div class="wrapper">
+
           <h2><center>{{uiLabels.thankOrder}}</center></h2>
           <OrderItemToShow
-          v-if="order.status !== 'process'"
+          v-if="(order.status !== 'started')"
           class="orderitemtoshow"
           v-for="(order,key) in orders"
-          v-on:process="markProcess(key)"
+          v-on:process="showorder(order)"
           :order-id="key"
           :order="order"
           :ui-labels="uiLabels"
@@ -18,16 +19,10 @@
     <br>
     <button v-on:click="changePage()"><h1>{{uiLabels.newOrder}}</h1></button>
   </div>
-
-
-
 </div>
-
-
 </template>
 <script>
 import OrderItem from '@/components/OrderItem.vue'
-import OrderItemToPrepare from '@/components/OrderItemToPrepare.vue'
 import Ingredient from '@/components/Ingredient.vue'
 import IngredientStock from '@/components/IngredientStock.vue'
 import OrderItemToShow from '@/components/OrderItemToShow.vue'
@@ -39,7 +34,6 @@ export default {
   name: 'Ordering',
   components: {
     OrderItem,
-    OrderItemToPrepare,
     OrderItemToShow,
     Ingredient,
     IngredientStock
@@ -57,19 +51,12 @@ export default {
     changePage: function() {
       this.$router.push('/');
       this.$router.go();
-
     },
     setCategory: function (cat) {
       this.currentCategory = cat;
     },
-    markProcess: function (orderid) {
-      this.$store.state.socket.emit("orderNotStarted", orderid);
-    },
-    markDone: function (orderid) {
-      this.$store.state.socket.emit("orderDone", orderid);
-    },
-    markUndo: function (orderid) {
-      this.$store.state.socket.emit("orderUndo", orderid);
+    showOrder: function (orderid) {
+      this.$store.state.socket.emit("order", order);
     }
   }
 }

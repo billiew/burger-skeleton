@@ -7,18 +7,19 @@
     :order-id="orderId"
     :order="order">
   </OrderItem>
-  <button v-on:click="orderNotStarted">
+  <div v-if="order.status ==='not-started'">
+  <button v-on:click="orderStarted">
     {{uiLabels.process}}
   </button>
+</div>
 </div>
 
 </template>
 <script>
 
 import OrderItem from '@/components/OrderItem.vue'
-
 export default {
-  name: 'OrderItemToPrepare',
+  name: 'OrderItemToShow',
   components: { OrderItem },
   props: {
     uiLabels: Object,
@@ -27,10 +28,10 @@ export default {
     lang: String
   },
   methods: {
-    orderDone: function () {
-      // sending 'done' message to parent component or view so that it
-      // can catch it with v-on:done in the component declaration
-      this.$emit('process');
+    orderStarted: function () {
+      // sending 'process' message to parent component or view so that it
+      // can catch it with v-on:process in the component declaration
+      this.$emit('started', this.orderId);
     },
     /*orderUndo: function () {
 			// sending 'done' message to parent component or view so that it
