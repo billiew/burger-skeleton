@@ -4,10 +4,12 @@
     <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
     <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
     <div class="wrapper">
-
-      <button v-on:click="changePage()"><h1>{{uiLabels.newOrder}}</h1></button>
+      <center>
+      <h1>{{uiLabels.welcome}}</h1>
       <br>
-            <h2><center>{{uiLabels.welcome}}</center></h2>
+      <button v-on:click="changePage()"><h1>{{uiLabels.newOrder}}</h1></button>
+      </center>
+
   </div>
 </div>
 </template>
@@ -43,57 +45,10 @@ export default {
       currentCategory: 0
     }
   },
-  created: function () {
-    this.$store.state.socket.on('orderNumber', function (data) {
-      this.orderNumber = data;
-    }.bind(this));
-  },
   methods: {
     changePage: function(item) {
       this.$router.push('/');
       this.$router.go();
-    },
-    ingredientCount: function (item) {
-      let counter = 0;
-      for(let i = 0; i < this.chosenIngredients.length; i += 1) {
-        if (this.chosenIngredients[i] === item)
-          counter += 1;
-      }
-      return counter;
-    },
-    setCategory: function (cat) {
-      this.currentCategory = cat;
-    },
-    addToOrder: function (item) {
-      this.chosenIngredients.push(item);
-      this.price += +item.selling_price;
-    },
-    removeFromOrder: function (item) {
-      for (let i = 0; i < this.chosenIngredients.length; i += 1 ) {
-        if (this.chosenIngredients[i] === item) {
-          this.chosenIngredients.splice(i, 1);
-          if (this.price>0){
-            this.price -= +item.selling_price;
-            break;
-          }
-        }
-      }
-    },
-    placeOrder: function () {
-      var i,
-      //Wrap the order in an object
-      order = {
-        ingredients: this.chosenIngredients,
-        price: this.price
-      };
-      // make use of socket.io's magic to send the stuff to the kitchen via the server (app.js)
-      this.$store.state.socket.emit('order', {order: order});
-      //set all counters to 0. Notice the use of $refs
-      for (i = 0; i < this.$refs.ingredient.length; i += 1) {
-        this.$refs.ingredient[i].resetCounter();
-      }
-      this.price = 0;
-      this.chosenIngredients = [];
     },
     reload(){
       var location = this.$route.fullPath
@@ -112,60 +67,14 @@ export default {
   width: 70;
   color: black;
 }
-
-#placeOrderButton{
-  position:absolute;
-  bottom:2%;
-  right:3%;
-  font-size: 100%;
-  padding: 2%;
-  background-color: #4CAF50;
-  border-color: #000000;
-  border-radius: 10px;
-
-}
-#placeOrderText{
-  background-color: #87CEFA;
-  border-radius: 10px;
-  font-size: 130%;
-}
-#PlaceOrderSection{
-  background-color:  	#ADD8E6;
-  border-radius: 8px;
-  height: 450px;
-
-}
-
-.menu{
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  padding: 1em;
-
-}
-
-.menu2{
-  display: grid;
-  grid-template-columns: auto auto auto 10%;
-  height: 20%;
-  padding: 1em;
-
-}
-
 .wrapper{
-  display: grid;
-  grid-gap: 1%;
-  grid-template-columns: 80% 20%;
   padding: 3%;
-}
-
-.wrapper2{
-  display: grid;
-  grid-gap: 5%;
-  grid-template-columns: 30% 30% 30% ;
-  padding: 1em;
+  font-size: 2em;
+  background-color: rgba(255, 255, 255, 0.5);
+  align-items: center;
+  border: 1em;
 
 }
-
 .example-panel {
   width: 100%;
   height: 100%;
@@ -174,22 +83,6 @@ export default {
   top:0;
   z-index: -2;
 }
-.ingredient {
-  text-align: center;
-  border: 1px solid #ccd;
-  padding: 1em;
-  background-color: rgb(190, 210, 255);
-}
-
-#mybutton{
-  width: 60%;
-  background-color: rgb(190, 210, 255);
-}
-
-#mybutton:focus {
-  background-color: LightSalmon;
-}
-
 button:hover {
   background-color: lightblue;
   cursor: pointer;
