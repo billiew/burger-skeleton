@@ -31,7 +31,7 @@
       </Ingredient>
     </div>
     <div id="PlaceOrderSection">
-      <h1 id="placeOrderText">{{ uiLabels.order }}</h1>
+      <h1 id="placeOrderText">{{ uiLabels.yourOrder }}</h1>
       <div v-for="item in groupIngredients(chosenIngredients)" :key="item.ingredient_id">
         {{item.count}} x {{ item.ing['ingredient_' + lang] }}
       </div>
@@ -96,7 +96,7 @@ export default {
       let counter = 0;
       for(let i = 0; i < this.chosenIngredients.length; i += 1) {
         if (this.chosenIngredients[i] === item)
-          counter += 1;
+        counter += 1;
       }
       return counter;
     },
