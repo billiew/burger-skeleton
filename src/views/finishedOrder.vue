@@ -4,7 +4,17 @@
   <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
   <div class="wrapper">
           <h2><center>{{uiLabels.thankOrder}}</center></h2>
-
+          <OrderItemToShow
+          v-if="order.status !== 'process'"
+          class="orderitemtoshow"
+          v-for="(order,key) in orders"
+          v-on:process="markProcess(key)"
+          :order-id="key"
+          :order="order"
+          :ui-labels="uiLabels"
+          :lang="lang"
+          :key="key">
+        </OrderItemToShow>
     <br>
     <button v-on:click="changePage()"><h1>{{uiLabels.newOrder}}</h1></button>
   </div>
@@ -20,6 +30,7 @@ import OrderItem from '@/components/OrderItem.vue'
 import OrderItemToPrepare from '@/components/OrderItemToPrepare.vue'
 import Ingredient from '@/components/Ingredient.vue'
 import IngredientStock from '@/components/IngredientStock.vue'
+import OrderItemToShow from '@/components/OrderItemToShow.vue'
 
 //import methods and data that are shared between ordering and kitchen views
 import sharedVueStuff from '@/components/sharedVueStuff.js'
@@ -29,6 +40,7 @@ export default {
   components: {
     OrderItem,
     OrderItemToPrepare,
+    OrderItemToShow,
     Ingredient,
     IngredientStock
   },
@@ -49,6 +61,9 @@ export default {
     },
     setCategory: function (cat) {
       this.currentCategory = cat;
+    },
+    markProcess: function (orderid) {
+      this.$store.state.socket.emit("orderNotStarted", orderid);
     },
     markDone: function (orderid) {
       this.$store.state.socket.emit("orderDone", orderid);
@@ -83,7 +98,7 @@ export default {
     padding: 2em;
   }
 
-  .orderitemtoprepare {
+  .orderitemtoshow {
     border: 1px solid #ccd;
     padding: 1em;
     background-color: rgb(190, 210, 255);
