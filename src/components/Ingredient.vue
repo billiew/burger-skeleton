@@ -64,11 +64,6 @@ export default {
 </script>
 <style scoped>
 
-/*#orderbuttons{
-padding:5px;
-border-radius: 30px;
-}
-*/
 #boldTextItem{
   font-weight: bold;
   font-size: 120%;

@@ -16,7 +16,6 @@
       <button id="mybutton" v-on:click="setCategory(3)"> {{ uiLabels.sauce }} </button>
     </div>
     <div  class="wrapper">
-
       <div class="wrapper2">
         <Ingredient
         ref="ingredient"
@@ -30,31 +29,43 @@
         :key="item.ingredient_id">
       </Ingredient>
     </div>
-    <div id="PlaceOrderSection">
-      <h1 id="placeOrderText">{{ uiLabels.yourOrder }}</h1>
-      <div v-for="item in groupIngredients(chosenIngredients)" :key="item.ingredient_id">
-        {{item.count}} x {{ item.ing['ingredient_' + lang] }}
+    <div class="theOrder" id="PlaceOrderSection">
+      <div class="box orderItems">
+        <h1>{{ uiLabels.yourOrder }}</h1>
+        <h4> {{uiLabels.hamburger}}: </h4>
+        <div v-for="item in groupIngredients(chosenIngredients)" :key="item.ingredient_id">
+          <span v-if="item.ing.category<5">{{item.count}} x {{ item.ing['ingredient_' + lang] }}</span>
+        </div>
+        <h4> {{uiLabels.drinks}}: </h4>
+        <div v-for="item in groupIngredients(chosenIngredients)" :key="item.ingredient_id">
+          <span v-if="item.ing.category===6">{{item.count}} x {{ item.ing['ingredient_' + lang] }}</span>
+        </div>
+        <h4> {{uiLabels.sideorders}}: </h4>
+        <div v-for="item in groupIngredients(chosenIngredients)" :key="item.ingredient_id">
+          <span v-if="item.ing.category===5">{{item.count}} x {{ item.ing['ingredient_' + lang] }}</span>
+        </div>
+        <div>
+          <br>
+          <h4>{{ uiLabels.sum }} : {{ price }} :-</h4>
+        </div>
       </div>
-      <div>
-        <br>
-        {{ uiLabels.sum }} : {{ price }} :-
-      </div>
-      <button :disabled="(chosenIngredients.length==0)?true:false" id="placeOrderButton" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
+        <button :disabled="(chosenIngredients.length==0)?true:false" class="box button" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
     </div>
-  </div>
 
-  <!-- <h1>{{ uiLabels.ordersInQueue }}</h1>
-  <div>
-  <OrderItem
-  v-for="(order, key) in orders"
-  v-if="order.status !== 'done'"
-  :order-id="key"
-  :order="order"
-  :ui-labels="uiLabels"
-  :lang="lang"
-  :key="key">
-</OrderItem>
+
+    <!-- <h1>{{ uiLabels.ordersInQueue }}</h1>
+    <div>
+    <OrderItem
+    v-for="(order, key) in orders"
+    v-if="order.status !== 'done'"
+    :order-id="key"
+    :order="order"
+    :ui-labels="uiLabels"
+    :lang="lang"
+    :key="key">
+  </OrderItem>
 </div> -->
+</div>
 </div>
 </template>
 <script>
@@ -136,7 +147,6 @@ export default {
 
       this.$router.push('/finishedOrder');
 
-
     },
     cancelOrder: function() {
       this.$router.push('/startpage');
@@ -151,32 +161,6 @@ export default {
   margin:auto;
   width: 70;
   color: black;
-}
-
-#placeOrderButton{
-  position:absolute;
-  bottom:1em;
-  right:3em;
-  font-size: 1em;
-  padding: 1em;
-  background-color: #4CAF50;
-  border-color: #000000;
-  border-radius: 1em;
-
-}
-#placeOrderText{
-  background-color: white;
-  marigin: 3em;
-  border-radius: 0.1em;
-  font-size: 1.3em;
-}
-#PlaceOrderSection{
-  background-color:  	rgba(255, 255, 255, 0.9);
-  border-radius: 0em;
-  marigin: 5em;
-  border-width: 5em;
-  height: 30em;
-
 }
 
 .menu{
@@ -199,6 +183,7 @@ export default {
   grid-gap: 1%;
   grid-template-columns: 80% 20%;
   padding: 3%;
+  height: fit-content;
 }
 
 .wrapper2{
@@ -206,7 +191,47 @@ export default {
   grid-gap: 5%;
   grid-template-columns: 30% 30% 30% ;
   padding: 1em;
+  height: fit-content;
+}
 
+.theOrder{
+  display: grid;
+  font-family: arial;
+  grid-gap: 1%;
+  grid-template-columns: auto;
+  background-color:  rgba(255, 255, 255, 0.9);
+  border-radius: 1em;
+  border-width: 5em;
+  height: fit-content;
+}
+
+.box {
+  padding: 1em;
+  font-size: 90%;
+
+}
+
+.orderItems{
+  border-color: #000000;
+  border-radius: 6em;
+}
+
+.button{
+  bottom:1em;
+  right:3em;
+  font-size: 1em;
+  font-weight: bolder;
+  background-color: #4CAF50;
+  border-color: #000000;
+  border-radius: 0.5em;
+  height: 5em;
+
+}
+#placeOrderText{
+  background-color: white;
+  marigin: 3em;
+  border-radius: 0.1em;
+  font-size: 1.3em;
 }
 
 .example-panel {

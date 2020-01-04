@@ -8,9 +8,6 @@
     :order="order">
   </OrderItem>
   <div v-if="order.status ==='not-started'">
-  <button v-on:click="orderStarted">
-    {{uiLabels.process}}
-  </button>
 </div>
 </div>
 

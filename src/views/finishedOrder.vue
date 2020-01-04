@@ -3,10 +3,10 @@
   <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
   <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
   <div class="wrapper">
-
           <h2><center>{{uiLabels.thankOrder}}</center></h2>
+          <!-- {{orders}} -->
           <OrderItemToShow
-          v-if="(order.status !== 'started')"
+          v-if="(order.orderId === 1)"
           class="orderitemtoshow"
           v-for="(order,key) in orders"
           v-on:process="showorder(order)"
@@ -22,9 +22,6 @@
 </div>
 </template>
 <script>
-import OrderItem from '@/components/OrderItem.vue'
-import Ingredient from '@/components/Ingredient.vue'
-import IngredientStock from '@/components/IngredientStock.vue'
 import OrderItemToShow from '@/components/OrderItemToShow.vue'
 
 //import methods and data that are shared between ordering and kitchen views
@@ -33,30 +30,15 @@ import sharedVueStuff from '@/components/sharedVueStuff.js'
 export default {
   name: 'Ordering',
   components: {
-    OrderItem,
     OrderItemToShow,
-    Ingredient,
-    IngredientStock
   },
   mixins: [sharedVueStuff], // include stuff that is used in both
                             //the ordering system and the kitchen
-  data: function(){
-    return {
-      chosenIngredients: [],
-      price: 0,
-      currentCategory: 1
-    }
-  },
+
   methods: {
     changePage: function() {
       this.$router.push('/');
       this.$router.go();
-    },
-    setCategory: function (cat) {
-      this.currentCategory = cat;
-    },
-    showOrder: function (orderid) {
-      this.$store.state.socket.emit("order", order);
     }
   }
 }
