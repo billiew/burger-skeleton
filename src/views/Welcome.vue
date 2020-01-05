@@ -1,11 +1,12 @@
 <template>
   <div id="ordering">
-    <img class="example-panel" src="@/assets/bubbles.jpg">
+    <img class="example-panel" src="@/assets/white-brick-wall.jpg">
     <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
     <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
     <div class="wrapper">
       <center>
-      <h1>{{uiLabels.welcome}}</h1>
+      <span><img class="burger" src="@/assets/burger.png" height="70"><img class="header" src="@/assets/Crafty-Burgers.png"><img class="burger" src="@/assets/burger.png" height="70"></span>
+      <h3>{{uiLabels.welcome}}</h3>
       <br>
       <button v-on:click="changePage()"><h1>{{uiLabels.newOrder}}</h1></button>
       </center>
@@ -73,8 +74,42 @@ export default {
   background-color: rgba(255, 255, 255, 0.5);
   align-items: center;
   border: 1em;
+  margin: 2em;
+  font-family: arial;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="wrapper"] {
+    font-size: 1em;
+
+  }
+}
+
+.header {
 
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="header"] {
+    width: 80%;
+
+  }
+}
+
+.burger {
+
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="burger"] {
+    height: 1em;
+
+  }
+}
+
 .example-panel {
   width: 100%;
   height: 100%;
@@ -83,6 +118,8 @@ export default {
   top:0;
   z-index: -2;
 }
+
+
 button:hover {
   background-color: lightblue;
   cursor: pointer;
