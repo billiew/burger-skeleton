@@ -6,17 +6,19 @@
     <center class="main">
       <h2>{{uiLabels.thankOrder}}</h2>
       <!-- {{orders}} -->
-      <OrderItemToShow
-      v-if="(order.orderId === 1)"
-      class="orderitemtoshow"
-      v-for="(order,key) in orders"
-      v-on:started="startOrder(key)"
-      :order-id="key"
-      :order="order"
-      :ui-labels="uiLabels"
-      :lang="lang"
-      :key="key">
-      </OrderItemToShow>
+      <div v-for="(order, key) in orders">
+      <h6> {{finishOrderNumber = order.orderId}}</h6>
+     </div>
+     <OrderItemToShow
+     v-if="(order.orderId === finishOrderNumber)"
+     class="orderitemtoshow"
+     v-for="(order,key) in orders"
+     :order-id="key"
+     :order="order"
+     :ui-labels="uiLabels"
+     :lang="lang"
+     :key="key">
+   </OrderItemToShow>
     <br>
     </center>
     <center class="theButtons">
