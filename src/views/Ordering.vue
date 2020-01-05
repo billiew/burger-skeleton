@@ -4,16 +4,16 @@
     <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
     <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
     <div class="menu2">
-      <button id="mybutton" v-on:click="setCategory(1)"> <img src="@/assets/burger.png" height="50"> </button>
-      <button id="mybutton" v-on:click="setCategory(6)"><img src="@/assets/soda.png" height="50"> </button>
-      <button id="mybutton" v-on:click="setCategory(5)"> <img src="@/assets/fries.png" height="60"></button>
-      <button id="mybutton" v-on:click="cancelOrder()">  {{ uiLabels.cancelOrder }} </button>
+      <button id="button0" v-on:click="setCategory(1)"> <img src="@/assets/burger.png" height="50"> </button>
+      <button id="button6" v-on:click="setCategory(6)"><img src="@/assets/soda.png" height="50"> </button>
+      <button id="button5" v-on:click="setCategory(5)"> <img src="@/assets/fries.png" height="60"></button>
+      <button id="buttonCancel" v-on:click="cancelOrder()">  {{ uiLabels.cancelOrder }} </button>
     </div>
     <div class="menu">
-      <button id="mybutton" v-on:click="setCategory(1)"> {{ uiLabels.patty }} </button>
-      <button id="mybutton" v-on:click="setCategory(4)"> {{ uiLabels.bread }} </button>
-      <button id="mybutton" v-on:click="setCategory(2)"> {{ uiLabels.addon }} </button>
-      <button id="mybutton" v-on:click="setCategory(3)"> {{ uiLabels.sauce }} </button>
+      <button id="button1" v-on:click="setCategory(1)"> {{ uiLabels.patty }} </button>
+      <button id="button4" v-on:click="setCategory(4)"> {{ uiLabels.bread }} </button>
+      <button id="button2" v-on:click="setCategory(2)"> {{ uiLabels.addon }} </button>
+      <button id="button3" v-on:click="setCategory(3)"> {{ uiLabels.sauce }} </button>
     </div>
     <div  class="wrapper">
       <div class="wrapper2">
@@ -285,16 +285,19 @@ export default {
     width: fit-content;
   }
 }
+/* @when cat=={
 
-#mybutton{
+} */
+/* #mybutton{
   width: 60%;
   background-color: rgb(190, 210, 255);
-}
-
-#mybutton:focus {
+} */
+button:focus {
   background-color: LightSalmon;
 }
-
+/* #mybutton:hover{
+  background-color: lightblue;
+} */
 button:hover {
   background-color: lightblue;
   cursor: pointer;
