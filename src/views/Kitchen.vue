@@ -2,7 +2,7 @@
 <div id="orders">
   <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
   <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
-  <div>
+  <div class="buttons">
     <button id="mybutton" v-on:click="changeView('que')"> <h1>{{ uiLabels.ordersInQueue }}</h1> </button>
     <button id="mybutton" v-on:click="changeView('finished')"> <h1>{{ uiLabels.ordersFinished }}</h1> </button>
     <button id="mybutton" v-on:click="changeView('productStock')"> <h1>{{ uiLabels.productsInStock }}</h1> </button>
@@ -139,14 +139,18 @@ export default {
     background-color: rgb(190, 210, 255);
   }
 
+  .buttons {
+    margin-left: 10%;
+  }
+
   #mybutton{
     height: 5em;
     width: 30%;
-    background-color: rgb(250, 210, 255);
+    background-color: rgb(100, 150, 205);
   }
 
   #mybutton:focus {
-    background-color: LightSalmon;
+    background-color: lightblue;
   }
 
   .menu{
