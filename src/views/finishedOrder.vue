@@ -42,9 +42,6 @@ export default {
   //the ordering system and the kitchen
 
   methods: {
-    startOrder: function(orderid) {
-      this.$store.state.socket.emit("orderStarted", orderid);
-    },
     changePageToStart: function() {
       this.$router.push('/startpage');
     },
