@@ -91,4 +91,8 @@ export default {
 	grid-column: 4 ;
 	grid-row: 1 / span 3;
 }
+button:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
 </style>
