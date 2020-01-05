@@ -29,7 +29,7 @@
         :key="item.ingredient_id">
       </Ingredient>
     </div>
-    <div class="theOrder" id="PlaceOrderSection">
+    <div class="theOrder">
       <div class="box orderItems">
         <h1>{{ uiLabels.yourOrder }}</h1>
         <h4> {{uiLabels.hamburger}}: </h4>
@@ -50,6 +50,7 @@
         </div>
       </div>
       <button :disabled="(chosenIngredients.length==0)?true:false" class="box button" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
+        <br id="empty">
       <div class="box allergies">
         <img src="@/assets/vegan.png" height="35">
         {{ uiLabels.vegan }}
@@ -179,7 +180,9 @@ export default {
   padding: 1em;
 
 }
-
+.menu button{
+  height: 3em;
+}
 .menu2{
   display: grid;
   grid-template-columns: auto auto auto 10%;
@@ -225,7 +228,6 @@ export default {
   font-family: arial;
   grid-gap: 1%;
   grid-template-columns: auto;
-  background-color:  rgba(255, 255, 255, 0.9);
   border-radius: 1em;
   border-width: 5em;
   height: fit-content;
@@ -242,6 +244,7 @@ export default {
 .box {
   padding: 1em;
   font-size: 90%;
+  border-radius: 1em;
 }
 
 @media only screen and (max-width: 768px) {
@@ -252,7 +255,7 @@ export default {
 }
 .orderItems{
   border-color: #000000;
-  border-radius: 6em;
+  background-color:  rgba(255, 255, 255, 0.9);
 }
 
 .button{
@@ -262,11 +265,14 @@ export default {
   font-weight: bolder;
   background-color: #4CAF50;
   border-color: #000000;
-  border-radius: 0.5em;
   height: 5em;
+}
+empty{
+  background-color: rgba(0,0,0,0);
 }
 .allergies{
   padding: 1em;
+  background-color:  rgba(255, 255, 255, 0.9);
 }
 #placeOrderText{
   background-color: white;
@@ -297,19 +303,16 @@ export default {
     width: fit-content;
   }
 }
-@when cat==1{
+@when (cat:"1"){
 
 }
-/* #mybutton{
-width: 60%;
-background-color: rgb(190, 210, 255);
-} */
+button {
+  border-radius: 1em;
+  font-weight: bold;
+}
 button:focus {
   background-color: LightSalmon;
 }
-/* #mybutton:hover{
-background-color: lightblue;
-} */
 button:hover {
   background-color: lightblue;
   cursor: pointer;
