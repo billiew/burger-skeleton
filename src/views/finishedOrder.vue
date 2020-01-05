@@ -17,7 +17,7 @@
           :key="key">
         </OrderItemToShow>
     <br>
-    <button v-on:click="changePage()"><h1>{{uiLabels.newOrder}}</h1></button>
+    <button v-on:click="changePage()"><h1>Avsluta</h1></button>
   </div>
 </div>
 </template>
@@ -40,8 +40,7 @@ export default {
       this.$store.state.socket.emit("orderStarted", orderid);
     },
     changePage: function() {
-      this.$router.push('/');
-      this.$router.go();
+      this.$router.push('/startpage');
     }
   }
 }
