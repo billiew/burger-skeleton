@@ -192,6 +192,13 @@ export default {
 
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="menu2"] {
+    grid-template-columns: 30% 20% 25% 25%;
+  }
+}
+
 .wrapper{
   display: grid;
   grid-gap: 1%;
