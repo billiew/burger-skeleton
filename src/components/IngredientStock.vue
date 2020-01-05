@@ -31,6 +31,12 @@ export default {
 }
 </script>
 <style scoped>
+
+button {
+  height: 5em;
+  border-radius: 1em;
+}
+
 button:hover {
   background-color: lightblue;
   cursor: pointer;

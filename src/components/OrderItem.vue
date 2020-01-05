@@ -91,6 +91,13 @@ export default {
 	grid-column: 4 ;
 	grid-row: 1 / span 3;
 }
+
+button {
+	width: 5em;
+  height: 5em;
+  border-radius: 1em;
+}
+
 button:hover {
   background-color: lightblue;
   cursor: pointer;
