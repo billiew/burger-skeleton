@@ -4,9 +4,9 @@
     <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
     <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
     <div class="menu2">
-      <button id="button0" v-on:click="setCategory(1)"> <img src="@/assets/burger.png" height="50"> </button>
-      <button id="button6" v-on:click="setCategory(6)"><img src="@/assets/soda.png" height="50"> </button>
-      <button id="button5" v-on:click="setCategory(5)"> <img src="@/assets/fries.png" height="60"></button>
+      <button id="button0" v-on:click="setCategory(1)"> <img src="@/assets/burger.png" height="50" title="Burger"></button>
+      <button id="button6" v-on:click="setCategory(6)"><img src="@/assets/soda.png" height="50" title="Drinks"> </button>
+      <button id="button5" v-on:click="setCategory(5)"> <img src="@/assets/fries.png" height="60" title="Sides"></button>
       <button id="buttonCancel" v-on:click="cancelOrder()">  {{ uiLabels.cancelOrder }} </button>
     </div>
     <div class="menu" v-if="currentCategory<5">
@@ -53,13 +53,13 @@
       <button :disabled="(chosenIngredients.length==0)?true:false" class="box button" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
         <br id="empty">
       <div class="box allergies">
-        <img src="@/assets/vegan.png" height="35">
+        <img src="@/assets/vegan.png" height="35" title="Vegan">
         {{ uiLabels.vegan }}
         <br>
-        <img src="@/assets/lactose-free.png" height="35">
+        <img src="@/assets/lactose-free.png" height="35" title="Lactose free">
         {{ uiLabels.lactose }}
         <br>
-        <img src="@/assets/gluten-free.png" height="35">
+        <img src="@/assets/gluten-free.png" height="35" title="Gluten free">
         {{ uiLabels.gluten }}
       </div>
     </div>
