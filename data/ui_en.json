@@ -33,5 +33,6 @@
   "lactose" : "Lactose free",
   "gluten" : "Gluten free",
   "finish" : "Finished",
-  "newMenu" : "New menu"
+  "newMenu" : "New menu",
+  "limit" : "Only one burger per order"
 }

@@ -3,6 +3,7 @@
     <img class="example-panel" src="@/assets/white-brick-wall.jpg">
     <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
     <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
+    <h4 class="OBS">{{uiLabels.limit}}</h4>
     <div class="menu2">
       <button id="button0" v-on:click="setCategory(1)"> <img src="@/assets/burger.png" height="50" title="Burger"></button>
       <button id="button6" v-on:click="setCategory(6)"><img src="@/assets/soda.png" height="50" title="Drinks"> </button>
@@ -170,10 +171,19 @@ export default {
 <style scoped>
 /* scoped in the style tag means that these rules will only apply to elements, classes and ids in this template and no other templates. */
 #ordering {
-  margin-bottom: 50%;
+  margin-bottom: 30%;
   width: 70;
   color: black;
 }
+
+.OBS {
+  text-transform: uppercase;
+  text-align: center;
+  color: red;
+  background-color: pink;
+  font-family: arial;
+}
+
 
 .menu{
   display: grid;
@@ -202,7 +212,7 @@ export default {
 .wrapper{
   display: grid;
   grid-gap: 1%;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 75% 25%;
   padding: 3%;
   height: fit-content;
 }
@@ -210,13 +220,14 @@ export default {
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   [class*="wrapper"] {
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 60% 40%;
+    grid-gap: 4%;
   }
 }
 
 .wrapper2{
   display: grid;
-  grid-gap: 5%;
+  grid-gap: 3%;
   grid-template-columns: 30% 30% 30% ;
   padding: 1em;
   height: fit-content;
@@ -226,8 +237,9 @@ export default {
   /* For mobile phones: */
   [class*="wrapper2"] {
     grid-template-columns: 100%;
-    grid-gap: 1%;
+    grid-gap: 0.5%;
     padding: 0em;
+    width: 100%;
   }
 }
 
@@ -300,7 +312,7 @@ empty{
 .ingredient {
   text-align: center;
   border: 1em solid #ccd;
-  padding: 1.6em;
+  padding: 1.6em 1.6em 3em 1.6em;
   background-color: rgb(255, 250, 250);
   height: 9em;
 }
@@ -309,9 +321,9 @@ empty{
   /* For mobile phones: */
   [class*="ingredient"] {
     border: 0.5em solid #ccd;
-    width: 75%;
-    padding: 1em;
-    padding-bottom: 2.4em;
+    width: 90%;
+    padding: 1em 0.1em 1em 0.1em;
+    height: fit-content;
   }
 }
 @when (cat:"1"){

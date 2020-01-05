@@ -33,5 +33,6 @@
   "lactose" : "Laktosfri",
   "gluten" : "Glutenfri",
   "finish" : "Avsluta",
-  "newMenu" : "Ny meny"
+  "newMenu" : "Ny meny",
+  "limit" : "Endast en burgare per beställning"
 }

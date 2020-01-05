@@ -5,7 +5,7 @@
     <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
     <center class="main">
       <h2>{{uiLabels.thankOrder}}</h2>
-      <div v-for="(order) in orders" :key="order.orderId">
+      <div v-for="(order) in orders" :key="order.price">
       <h6> {{changeOrderNumber(order.orderId)}}</h6>
      </div>
      <OrderItemToShow

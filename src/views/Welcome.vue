@@ -7,8 +7,9 @@
       <center>
       <span><img class="burger" src="@/assets/burger.png" height="70"><img class="header" src="@/assets/Crafty-Burgers.png"><img class="burger" src="@/assets/burger.png" height="70"></span>
       <h3>{{uiLabels.welcome}}</h3>
+      <h3 class="OBS"> {{uiLabels.limit}}</h3>
       <br>
-      <button v-on:click="changePage()"><h1>{{uiLabels.newOrder}}</h1></button>
+      <button class="newOrderButton" v-on:click="changePage()">{{uiLabels.newOrder}}</button>
       </center>
 
   </div>
@@ -108,6 +109,18 @@ export default {
     height: 1em;
 
   }
+}
+
+.OBS {
+  text-transform: uppercase;
+  color: red;
+  background-color: pink;
+}
+
+.newOrderButton{
+  text-transform: uppercase;
+  font-size: 100%;
+  padding: 1em;
 }
 
 .example-panel {
