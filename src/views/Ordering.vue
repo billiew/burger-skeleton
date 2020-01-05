@@ -9,7 +9,7 @@
       <button id="button5" v-on:click="setCategory(5)"> <img src="@/assets/fries.png" height="60"></button>
       <button id="buttonCancel" v-on:click="cancelOrder()">  {{ uiLabels.cancelOrder }} </button>
     </div>
-    <div class="menu">
+    <div class="menu" v-if="currentCategory<5">
       <button id="button1" v-on:click="setCategory(1)"> {{ uiLabels.patty }} </button>
       <button id="button4" v-on:click="setCategory(4)"> {{ uiLabels.bread }} </button>
       <button id="button2" v-on:click="setCategory(2)"> {{ uiLabels.addon }} </button>
@@ -104,7 +104,7 @@ export default {
       chosenIngredients: [],
       price: 0,
       orderNumber: "",
-      currentCategory: 0
+      currentCategory: 1
     }
   },
   created: function () {
