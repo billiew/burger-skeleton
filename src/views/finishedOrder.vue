@@ -5,7 +5,6 @@
     <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
     <center class="main">
       <h2>{{uiLabels.thankOrder}}</h2>
-      <!-- {{orders}} -->
       <div v-for="(order) in orders" :key="order.orderId">
       <h6> {{changeOrderNumber(order.orderId)}}</h6>
      </div>
@@ -70,8 +69,7 @@ h1 {
   text-transform: uppercase;
   font-size: 1.4em;
 }
-.orders{
-}
+
 .example-panel {
   width: 100%;
   height: 100%;
@@ -83,8 +81,10 @@ h1 {
 .orderitemtoshow {
   border: 1px solid #ccd;
   padding: 1em;
-  background-color: rgb(190, 210, 255);
+  background-color: rgba(255, 255, 255, 1);
 }
+
+
 .theButtons{
   align-items: center;
 }

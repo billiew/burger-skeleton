@@ -71,6 +71,16 @@ export default {
 .orderWrapper{
 	display: grid;
 	grid-template-columns: 10% 40% 30% 25% ;
+  width: 90%;
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="orderWrapper"] {
+    font-size: 0.5em;
+    grid-template-columns: 20% 30% 30% 25% ;
+  }
 }
 
 .box {
