@@ -170,7 +170,7 @@ export default {
 <style scoped>
 /* scoped in the style tag means that these rules will only apply to elements, classes and ids in this template and no other templates. */
 #ordering {
-  margin:auto;
+  margin-bottom: 50%;
   width: 70;
   color: black;
 }
@@ -301,7 +301,9 @@ empty{
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   [class*="ingredient"] {
-    width: fit-content;
+    border: 0.5em solid #ccd;
+    width: 75%;
+    padding: 1em;
     padding-bottom: 2.4em;
   }
 }
