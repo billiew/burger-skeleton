@@ -46,9 +46,6 @@ export default {
     };
   },
   methods: {
-    startOrder: function(orderid) {
-      this.$store.state.socket.emit("orderStarted", orderid);
-    },
     changePageToStart: function() {
       this.$router.push('/startpage');
     },
