@@ -69,5 +69,8 @@ export default {
   font-size: 120%;
   font-family: arial;
 }
-
+button:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
 </style>
