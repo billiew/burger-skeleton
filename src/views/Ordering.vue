@@ -225,7 +225,6 @@ export default {
   /* For mobile phones: */
   [class*="theOrder"] {
     width: fit-content;
-    padding: 0em;
   }
 }
 
@@ -235,7 +234,12 @@ export default {
   font-size: 90%;
 }
 
-
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="box"] {
+    padding: 0.3em;
+  }
+}
 .orderItems{
   border-color: #000000;
   border-radius: 6em;
