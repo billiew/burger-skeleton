@@ -43,9 +43,7 @@ FRÅGOR:
 
 - Varför måste man uppdatera sidan en eller flera (kitchen) gånger för att text mm ska visas?
 - Varför återställs antalet ingredienser när man hoppar mellan kategorier?
-- Hur kan vi använda UI-labels under mappen components så att tex knappen submit i kitchen
-  eller pcs kan ändra språk?
-
+- Varför försvinner ordrarna när stock uppdateras?
 (-dölja ingredienser som inte finns i lager?)
 
 CHECKLIST
@@ -53,24 +51,14 @@ CHECKLIST
 
 Prioriterat:
 - [ ] Anpassar efter skärmstorlek (någorlunda bra nu men måste vara bättre)
-- [ ] Fixa designen så att enbart % används och ej tex px
 
 Beställning:
-- [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg  
-      osv. försvinna. Christine och Bea försöker (med v-show 3/1)
 - [ ] Tack för din beställning, detta är ditt ordernummer-fönster. Lägg till ordernummer!
 
 
 
 
 Lågprioriterat:
-- [ ] Filtrering för laktos/gluten/vegan
-- [ ] Snygga till knapparna
-- [ ] Snygga till så alternativen ser ut som vi ville (layout)
-- [ ] Redigering i beställningslista, kunna ta bort ingrediens
-- [ ] de ingredienser som inte finns i lager ska försvinna ur ordering view
-- [ ] design av startfönster
-- [ ] göra inköpslistan till en scrollruta (så att allt får plats även om en vill ha en av varje ingrediens)
 - [ ] Knapparna ska lysa när man är inne i en kategori
 
 Kök:
