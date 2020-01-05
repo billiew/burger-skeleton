@@ -32,5 +32,6 @@
   "vegan" : "Vegan",
   "lactose" : "Lactose free",
   "gluten" : "Gluten free",
-  "finish" : "Finished"
+  "finish" : "Finished",
+  "newMenu" : "New menu"
 }

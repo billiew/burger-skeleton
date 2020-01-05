@@ -1,26 +1,29 @@
 <template>
-<div id="orders">
-  <img class="example-panel" src="@/assets/white-brick-wall.jpg">
-  <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
-  <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
-  <div class="wrapper">
-          <h2><center>{{uiLabels.thankOrder}}</center></h2>
-          <!-- {{orders}} -->
-          <OrderItemToShow
-          v-if="(order.orderId === 1)"
-          class="orderitemtoshow"
-          v-for="(order,key) in orders"
-          v-on:started="startOrder(key)"
-          :order-id="key"
-          :order="order"
-          :ui-labels="uiLabels"
-          :lang="lang"
-          :key="key">
-        </OrderItemToShow>
+  <div id="orders">
+    <img class="example-panel" src="@/assets/white-brick-wall.jpg">
+    <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
+    <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
+    <center class="main">
+      <h2>{{uiLabels.thankOrder}}</h2>
+      <!-- {{orders}} -->
+      <OrderItemToShow
+      v-if="(order.orderId === 1)"
+      class="orderitemtoshow"
+      v-for="(order,key) in orders"
+      v-on:started="startOrder(key)"
+      :order-id="key"
+      :order="order"
+      :ui-labels="uiLabels"
+      :lang="lang"
+      :key="key">
+      </OrderItemToShow>
     <br>
-    <button v-on:click="changePage()"><h1>Avsluta</h1></button>
+    </center>
+    <center class="theButtons">
+      <button v-on:click="changePageToOrder()"><h1>{{uiLabels.newMenu}}</h1></button>
+      <button v-on:click="changePageToStart()"><h1>{{uiLabels.finish}}</h1></button>
+    </center>
   </div>
-</div>
 </template>
 <script>
 import OrderItemToShow from '@/components/OrderItemToShow.vue'
@@ -34,80 +37,59 @@ export default {
     OrderItemToShow,
   },
   mixins: [sharedVueStuff], // include stuff that is used in both
-                            //the ordering system and the kitchen
+  //the ordering system and the kitchen
 
   methods: {
     startOrder: function(orderid) {
       this.$store.state.socket.emit("orderStarted", orderid);
     },
-    changePage: function() {
+    changePageToStart: function() {
       this.$router.push('/startpage');
+    },
+    changePageToOrder: function() {
+      this.$router.push('/');
     }
   }
 }
 
 </script>
 <style scoped>
-	#orders {
-    font-size:24pt;
-  }
-
-  h1 {
-    text-transform: uppercase;
-    font-size: 1.4em;
-  }
-
-  .wrapper{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: auto;
-    padding: 0.5em;
-  }
-  .wrapper2{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: auto;
-    padding: 2em;
-  }
-
-  .orderitemtoshow {
-    border: 1px solid #ccd;
-    padding: 1em;
-    background-color: rgb(190, 210, 255);
-  }
-  .orderitem {
-    border: 1px solid #ccd;
-    padding: 1em;
-    background-color: rgb(190, 210, 255);
-  }
-
-  #mybutton{
-    height: 5em;
-    width: 30%;
-    background-color: rgb(250, 210, 255);
-  }
-
-  #mybutton:focus {
-    background-color: LightSalmon;
-  }
-
-  .example-panel {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left:0;
-    top:0;
-    z-index: -2;
-  }
-
-  .menu{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    padding: 1em;
-
-  }
-  button:hover {
-    background-color: lightblue;
-    cursor: pointer;
-  }
+#orders {
+  font-size:24pt;
+}
+.main {
+  background-color: rgba(255,255,255,0,9);
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.orders{
+}
+.example-panel {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left:0;
+  top:0;
+  z-index: -2;
+}
+.orderitemtoshow {
+  border: 1px solid #ccd;
+  padding: 1em;
+  background-color: rgb(190, 210, 255);
+}
+.theButtons{
+  align-items: center;
+}
+button {
+  border-radius: 1em;
+  width: 10em;
+  font-weight: bold;
+  /* align: center; */
+}
+button:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
 </style>

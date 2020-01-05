@@ -32,5 +32,6 @@
   "vegan" : "Vegan",
   "lactose" : "Laktosfri",
   "gluten" : "Glutenfri",
-  "finish" : "Avsluta"
+  "finish" : "Avsluta",
+  "newMenu" : "Ny meny"
 }
