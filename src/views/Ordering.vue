@@ -287,7 +287,7 @@ export default {
   text-align: center;
   border: 1em solid #ccd;
   padding: 1.6em;
-  background-color: rgb(190, 210, 255);
+  background-color: rgb(255, 250, 250);
   height: 9em;
 }
 
