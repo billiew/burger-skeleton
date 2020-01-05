@@ -6,8 +6,8 @@
     <center class="main">
       <h2>{{uiLabels.thankOrder}}</h2>
       <!-- {{orders}} -->
-      <div v-for="(order, key) in orders">
-      <h6> {{finishOrderNumber = order.orderId}}</h6>
+      <div v-for="(order) in orders" :key="order.orderId">
+      <h6> {{changeOrderNumber(order.orderId)}}</h6>
      </div>
      <OrderItemToShow
      v-if="(order.orderId === finishOrderNumber)"
@@ -40,7 +40,11 @@ export default {
   },
   mixins: [sharedVueStuff], // include stuff that is used in both
   //the ordering system and the kitchen
-
+  data: function () {
+    return {
+      finishOrderNumber: 0
+    };
+  },
   methods: {
     startOrder: function(orderid) {
       this.$store.state.socket.emit("orderStarted", orderid);
@@ -50,6 +54,9 @@ export default {
     },
     changePageToOrder: function() {
       this.$router.push('/');
+    },
+    changeOrderNumber: function(ord) {
+      this.finishOrderNumber = ord;
     }
   }
 }
