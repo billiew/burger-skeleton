@@ -11,13 +11,13 @@
         {{item["ingredient_"+ lang]}}
       </div>
       <span v-if="item.vegan===1">
-        <img src="@/assets/vegan.png" height="35">
+        <img src="@/assets/vegan.png" height="35" title="Vegan">
       </span>
       <span v-if="item.milk_free===1">
-        <img src="@/assets/lactose-free.png" height="35">
+        <img src="@/assets/lactose-free.png" height="35" title="Lactose free">
       </span>
       <span v-if="item.gluten_free===1">
-        <img src="@/assets/gluten-free.png" height="35">
+        <img src="@/assets/gluten-free.png" height="35" title="Gluten free">
       </span>
       <br>
       {{item.selling_price}}:-
@@ -69,6 +69,9 @@ export default {
   font-weight: bold;
   font-size: 120%;
   font-family: arial;
+}
+button{
+  border-radius: 10em;
 }
 button:hover {
   cursor: pointer;

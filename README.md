@@ -55,6 +55,8 @@ Prioriterat:
 Beställning:
 - [ ] Tack för din beställning, detta är ditt ordernummer-fönster. Lägg till ordernummer!
 
+- [ ] Texten som visas när pekaren är över en bild bör byta språk
+
 
 
 
