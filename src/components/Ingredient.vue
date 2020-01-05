@@ -1,11 +1,11 @@
 <template>
   <div class="ingredient">
     <label>
-      <span>
+
         <button id="orderbuttons" v-on:click="decrementCounter"> <img src="@/assets/negative-sign-button.png" height="30"></button>
         <span id="boldTextItem"> ~ {{counter}} ~ </span>
         <button :disabled="(counter>=item.stock)?true:false"  id="orderbuttons"  v-on:click="incrementCounter"> <img src="@/assets/plusbutton.png" height="30"></button>
-      </span>
+
       <div id="boldTextItem">
         <br>
         {{item["ingredient_"+ lang]}}
@@ -70,7 +70,6 @@ export default {
   font-family: arial;
 }
 button:hover {
-  background-color: lightblue;
   cursor: pointer;
 }
 </style>

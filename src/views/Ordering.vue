@@ -1,6 +1,6 @@
 <template>
   <div id="ordering">
-    <img class="example-panel" src="@/assets/bubbles.jpg">
+    <img class="example-panel" src="@/assets/white-brick-wall.jpg">
     <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
     <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
     <div class="menu2">
@@ -186,12 +186,28 @@ export default {
   height: fit-content;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="wrapper"] {
+    grid-template-columns: 70% 30%;
+  }
+}
+
 .wrapper2{
   display: grid;
   grid-gap: 5%;
   grid-template-columns: 30% 30% 30% ;
   padding: 1em;
   height: fit-content;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="wrapper2"] {
+    grid-template-columns: 100%;
+    grid-gap: 1%;
+    padding: 0em;
+  }
 }
 
 .theOrder{
@@ -205,11 +221,20 @@ export default {
   height: fit-content;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="theOrder"] {
+    width: fit-content;
+    padding: 0em;
+  }
+}
+
+
 .box {
   padding: 1em;
   font-size: 90%;
-
 }
+
 
 .orderItems{
   border-color: #000000;
@@ -245,9 +270,16 @@ export default {
 .ingredient {
   text-align: center;
   border: 1em solid #ccd;
-  padding: 1em;
+  padding: 1.6em;
   background-color: rgb(190, 210, 255);
   height: 9em;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="ingredient"] {
+    width: fit-content;
+  }
 }
 
 #mybutton{
