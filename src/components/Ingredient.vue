@@ -22,7 +22,7 @@
       <br>
       {{item.selling_price}}:-
       <br>
-      {{item.stock}} pcs in stock  <!-- här kunna använda uiLabels -->
+      {{item.stock}} {{uiLabels.instock}}  <!-- här kunna använda uiLabels -->
     </label>
   </div>
 </template>
@@ -30,6 +30,7 @@
 export default {
   name: 'Ingredient',
   props: {
+    uiLabels: Object,
     item: Object,
     lang: String
   },

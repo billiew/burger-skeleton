@@ -26,7 +26,8 @@
         v-bind:counter="ingredientCount(item)"
         :item="item"
         :lang="lang"
-        :key="item.ingredient_id">
+        :key="item.ingredient_id"
+        :ui-labels="uiLabels">
       </Ingredient>
     </div>
     <div class="theOrder">
