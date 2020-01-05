@@ -46,6 +46,7 @@ export default {
 <style scoped>
 
 button {
+  background-color: rgb(0, 200, 0);
 	width: 5em;
   height: 5em;
   border-radius: 1em;

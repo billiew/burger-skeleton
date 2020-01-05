@@ -93,6 +93,7 @@ export default {
 }
 
 button {
+	background-color: red;
 	width: 5em;
   height: 5em;
   border-radius: 1em;
