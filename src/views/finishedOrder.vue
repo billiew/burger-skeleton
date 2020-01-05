@@ -9,7 +9,7 @@
           v-if="(order.orderId === 1)"
           class="orderitemtoshow"
           v-for="(order,key) in orders"
-          v-on:process="showorder(order)"
+          v-on:started="startOrder(key)"
           :order-id="key"
           :order="order"
           :ui-labels="uiLabels"
@@ -36,6 +36,9 @@ export default {
                             //the ordering system and the kitchen
 
   methods: {
+    startOrder: function(orderid) {
+      this.$store.state.socket.emit("orderStarted", orderid);
+    },
     changePage: function() {
       this.$router.push('/');
       this.$router.go();
