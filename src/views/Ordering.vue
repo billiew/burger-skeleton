@@ -49,7 +49,17 @@
           <h4>{{ uiLabels.sum }} : {{ price }} :-</h4>
         </div>
       </div>
-        <button :disabled="(chosenIngredients.length==0)?true:false" class="box button" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
+      <button :disabled="(chosenIngredients.length==0)?true:false" class="box button" v-on:click="placeOrder()">{{ uiLabels.placeOrder }}</button>
+      <div class="box allergies">
+        <img src="@/assets/vegan.png" height="35">
+        {{ uiLabels.vegan }}
+        <br>
+        <img src="@/assets/lactose-free.png" height="35">
+        {{ uiLabels.lactose }}
+        <br>
+        <img src="@/assets/gluten-free.png" height="35">
+        {{ uiLabels.gluten }}
+      </div>
     </div>
 
 
@@ -254,7 +264,9 @@ export default {
   border-color: #000000;
   border-radius: 0.5em;
   height: 5em;
-
+}
+.allergies{
+  padding: 1em;
 }
 #placeOrderText{
   background-color: white;
@@ -285,21 +297,24 @@ export default {
     width: fit-content;
   }
 }
-/* @when cat=={
+@when cat==1{
 
-} */
+}
 /* #mybutton{
-  width: 60%;
-  background-color: rgb(190, 210, 255);
+width: 60%;
+background-color: rgb(190, 210, 255);
 } */
 button:focus {
   background-color: LightSalmon;
 }
 /* #mybutton:hover{
-  background-color: lightblue;
+background-color: lightblue;
 } */
 button:hover {
   background-color: lightblue;
   cursor: pointer;
+}
+#buttonCancel{
+  background-color: rgb(255, 90, 90);
 }
 </style>

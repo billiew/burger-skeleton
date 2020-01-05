@@ -28,5 +28,9 @@
   "instock": "st i lager",
   "hamburger": "Hamburgare",
   "welcome" : "Välkommen till Crafty Burgers! Du bygger din burgare genom att välja alla burgarens delar separat. Smaklig måltid!",
-  "process" : "Avsluta beställning"
+  "process" : "Avsluta beställning",
+  "vegan" : "Vegan",
+  "lactose" : "Laktosfri",
+  "gluten" : "Glutenfri",
+  "finish" : "Avsluta"
 }

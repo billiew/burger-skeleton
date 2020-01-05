@@ -28,5 +28,9 @@
   "instock": "pcs in stock",
   "hamburger": "Hamburger",
   "welcome" : "Welcome to Crafty Burgers! You build your own burger by choosing all components seperately. Enjoy!",
-  "process" : "Exit order"
+  "process" : "Exit order",
+  "vegan" : "Vegan",
+  "lactose" : "Lactose free",
+  "gluten" : "Gluten free",
+  "finish" : "Finished"
 }
