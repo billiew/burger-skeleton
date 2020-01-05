@@ -167,17 +167,13 @@ export default {
   display: grid;
   grid-template-columns: auto auto auto auto;
   padding: 1em;
-
 }
-
 .menu2{
   display: grid;
   grid-template-columns: auto auto auto 10%;
   height: 20%;
   padding: 1em;
-
 }
-
 .wrapper{
   display: grid;
   grid-gap: 1%;
@@ -185,7 +181,6 @@ export default {
   padding: 3%;
   height: fit-content;
 }
-
 .wrapper2{
   display: grid;
   grid-gap: 5%;
@@ -193,7 +188,6 @@ export default {
   padding: 1em;
   height: fit-content;
 }
-
 .theOrder{
   display: grid;
   font-family: arial;
@@ -204,18 +198,14 @@ export default {
   border-width: 5em;
   height: fit-content;
 }
-
 .box {
   padding: 1em;
   font-size: 90%;
-
 }
-
 .orderItems{
   border-color: #000000;
   border-radius: 6em;
 }
-
 .button{
   bottom:1em;
   right:3em;
@@ -225,7 +215,6 @@ export default {
   border-color: #000000;
   border-radius: 0.5em;
   height: 5em;
-
 }
 #placeOrderText{
   background-color: white;
@@ -233,7 +222,6 @@ export default {
   border-radius: 0.1em;
   font-size: 1.3em;
 }
-
 .example-panel {
   width: 100%;
   height: 100%;
@@ -249,16 +237,13 @@ export default {
   background-color: rgb(190, 210, 255);
   height: 9em;
 }
-
 #mybutton{
   width: 60%;
-  background-color: rgb(190, 210, 255);
+  background-color: white;
 }
-
 #mybutton:focus {
-  background-color: LightSalmon;
+  /* background-color: LightSalmon; */
 }
-
 button:hover {
   background-color: lightblue;
   cursor: pointer;
