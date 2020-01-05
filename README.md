@@ -59,8 +59,7 @@ Beställning:
 - [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg  
       osv. försvinna. Christine och Bea försöker (med v-show 3/1)
 - [ ] Tack för din beställning, detta är ditt ordernummer-fönster. Lägg till ordernummer!
-- [ ] Om man lagt till tex bröd och lägger till pålägg, för att sen gå
-      tillbaka till bröd så står det 0 på det bröd man lagt till. (svårt...)
+
 
 
 
