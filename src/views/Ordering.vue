@@ -1,6 +1,6 @@
 <template>
   <div id="ordering">
-    <img class="example-panel" src="@/assets/bubbles.jpg">
+    <img class="example-panel" src="@/assets/white-brick-wall.jpg">
     <button v-if="this.lang=='en'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/sv.png" height="20"></button>
     <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
     <div class="menu2">
@@ -181,6 +181,17 @@ export default {
   padding: 3%;
   height: fit-content;
 }
+<<<<<<< HEAD
+=======
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="wrapper"] {
+    grid-template-columns: 70% 30%;
+  }
+}
+
+>>>>>>> 798429ec6a29487f4b3f69b282679aecaa9a1a4b
 .wrapper2{
   display: grid;
   grid-gap: 5%;
@@ -188,6 +199,19 @@ export default {
   padding: 1em;
   height: fit-content;
 }
+<<<<<<< HEAD
+=======
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="wrapper2"] {
+    grid-template-columns: 100%;
+    grid-gap: 1%;
+    padding: 0em;
+  }
+}
+
+>>>>>>> 798429ec6a29487f4b3f69b282679aecaa9a1a4b
 .theOrder{
   display: grid;
   font-family: arial;
@@ -198,10 +222,28 @@ export default {
   border-width: 5em;
   height: fit-content;
 }
+<<<<<<< HEAD
+=======
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="theOrder"] {
+    width: fit-content;
+    padding: 0em;
+  }
+}
+
+
+>>>>>>> 798429ec6a29487f4b3f69b282679aecaa9a1a4b
 .box {
   padding: 1em;
   font-size: 90%;
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 798429ec6a29487f4b3f69b282679aecaa9a1a4b
 .orderItems{
   border-color: #000000;
   border-radius: 6em;
@@ -233,10 +275,21 @@ export default {
 .ingredient {
   text-align: center;
   border: 1em solid #ccd;
-  padding: 1em;
+  padding: 1.6em;
   background-color: rgb(190, 210, 255);
   height: 9em;
 }
+<<<<<<< HEAD
+=======
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="ingredient"] {
+    width: fit-content;
+  }
+}
+
+>>>>>>> 798429ec6a29487f4b3f69b282679aecaa9a1a4b
 #mybutton{
   width: 60%;
   background-color: white;
