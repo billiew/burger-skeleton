@@ -52,18 +52,12 @@ CHECKLIST
 /////
 
 Prioriterat:
-- [ ] Dela upp Beställningen (den på höger sida) i Hamburgare, Dryck och       
-      Tillbehör (så som det är uppdelat i Kitchen)
 - [ ] Anpassar efter skärmstorlek (någorlunda bra nu men måste vara bättre)
 - [ ] Fixa designen så att enbart % används och ej tex px
-
-- [ ] fixa så att efter tack för din beställnin, döpa om ny beställning till avsluta och sedan
-      skicka till startpage ist för till beställningssidan :)
 
 Beställning:
 - [ ] När dryck eller tillbehör är i tryckt ska knapparna för bröd, pålägg  
       osv. försvinna. Christine och Bea försöker (med v-show 3/1)
-- [ ] Se till så att man hamnar i rätt kategori när sidan startar (förstår ej vad som menas)
 - [ ] Tack för din beställning, detta är ditt ordernummer-fönster. Lägg till ordernummer!
 - [ ] Om man lagt till tex bröd och lägger till pålägg, för att sen gå
       tillbaka till bröd så står det 0 på det bröd man lagt till. (svårt...)
@@ -78,12 +72,13 @@ Lågprioriterat:
 - [ ] de ingredienser som inte finns i lager ska försvinna ur ordering view
 - [ ] design av startfönster
 - [ ] göra inköpslistan till en scrollruta (så att allt får plats även om en vill ha en av varje ingrediens)
-- [ ] hover på button + och - ska vara cursor
+- [ ] Knapparna ska lysa när man är inne i en kategori
 
 Kök:
 - [ ] Att när man uppdaterar stock så försvinner inte beställningarna
       (Nu måste man uppdatera sidan för att se beställningarna igen)
 2020-01-03, Vi har testat, inte värt att lägga för mkt tid på
+
 Bra länkar att läsa vidare på:
 
 Om flikar:

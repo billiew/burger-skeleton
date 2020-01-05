@@ -20,9 +20,6 @@
       </div>
     </div>
     <div v-if="order.status==='not-started'">
-  <button v-on:click="orderStarted">
-    {{uiLabels.newOrder}}
-  </button>
 </div>
 </div>
 </template>
