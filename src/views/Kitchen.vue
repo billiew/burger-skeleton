@@ -159,6 +159,11 @@ export default {
     padding: 1em;
 
   }
+
+button {
+  border-radius: 1em;
+}
+
   button:hover {
     background-color: lightblue;
     cursor: pointer;

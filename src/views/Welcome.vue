@@ -119,6 +119,9 @@ export default {
   z-index: -2;
 }
 
+button {
+  border-radius: 1em;
+}
 
 button:hover {
   background-color: lightblue;
