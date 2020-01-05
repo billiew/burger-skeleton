@@ -44,5 +44,8 @@ export default {
 }
 </script>
 <style scoped>
-
+button:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
 </style>

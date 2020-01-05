@@ -31,7 +31,10 @@ export default {
 }
 </script>
 <style scoped>
-
+button:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
 /*#orderbuttons{
 padding:5px;
 border-radius: 30px;
