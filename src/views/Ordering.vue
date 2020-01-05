@@ -301,6 +301,7 @@ empty{
   /* For mobile phones: */
   [class*="ingredient"] {
     width: fit-content;
+    padding-bottom: 2.4em;
   }
 }
 @when (cat:"1"){
