@@ -5,7 +5,7 @@
     <button v-if="this.lang=='sv'" v-on:click="switchLang()">{{ uiLabels.language }} <img src="@/assets/en.png" height="20"></button>
     <h4 class="OBS">{{uiLabels.limit}}</h4>
     <div class="menu2">
-      <button id="button0" v-on:click="setCategory(1)"> <img src="@/assets/burger.png" height="50" :title="uiLabels.hamburger"></button>
+      <button id="button0" v-on:click="setCategory(1)"> <img src="@/assets/burger.png" height="45" :title="uiLabels.hamburger"></button>
       <button id="button6" v-on:click="setCategory(6)"><img src="@/assets/soda.png" height="50" :title="uiLabels.drinks"> </button>
       <button id="button5" v-on:click="setCategory(5)"> <img src="@/assets/fries.png" height="60" :title="uiLabels.sideorders"></button>
       <button id="buttonCancel" v-on:click="cancelOrder()">  {{ uiLabels.cancelOrder }} </button>
