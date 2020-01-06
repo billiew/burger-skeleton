@@ -134,6 +134,7 @@ export default {
 
 button {
   border-radius: 1em;
+  font-weight: bold;
 }
 
 button:hover {
