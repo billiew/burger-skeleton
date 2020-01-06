@@ -11,13 +11,13 @@
         {{item["ingredient_"+ lang]}}
       </div>
       <span v-if="item.vegan===1">
-        <img src="@/assets/vegan.png" height="35" title="Vegan">
+        <img src="@/assets/vegan.png" height="35" :title="uiLabels.vegan">
       </span>
       <span v-if="item.milk_free===1">
-        <img src="@/assets/lactose-free.png" height="35" title="Lactose free">
+        <img src="@/assets/lactose-free.png" height="35" :title="uiLabels.lactose">
       </span>
       <span v-if="item.gluten_free===1">
-        <img src="@/assets/gluten-free.png" height="35" title="Gluten free">
+        <img src="@/assets/gluten-free.png" height="35" :title="uiLabels.gluten">
       </span>
       <br>
       {{item.selling_price}}:-
