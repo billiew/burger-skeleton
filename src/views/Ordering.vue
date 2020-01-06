@@ -311,7 +311,7 @@ empty{
 }
 .ingredient {
   text-align: center;
-  border: 1em solid #ccd;
+  border: 0.5em solid rgb(150,150,150);
   padding: 1.6em 1.6em 3em 1.6em;
   background-color: rgb(255, 250, 250);
   height: 9em;
@@ -331,6 +331,7 @@ empty{
 }
 button {
   border-radius: 1em;
+  border:0.05em solid rgb(100,100,100);
   font-weight: bold;
 }
 button:focus {
@@ -342,5 +343,9 @@ button:hover {
 }
 #buttonCancel{
   background-color: rgb(255, 90, 90);
+}
+#buttonCancel:hover{
+  background-color: lightblue;
+  cursor: pointer;
 }
 </style>
