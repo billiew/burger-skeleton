@@ -50,6 +50,7 @@ export default {
     },
     changePageToOrder: function() {
       this.$router.push('/');
+      this.$router.go();
     },
     changeOrderNumber: function(ord) {
       this.finishOrderNumber = ord;
