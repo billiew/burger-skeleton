@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Ordering from './views/Ordering.vue'
+import Kitchen from './views/Kitchen.vue'
+import Finishedorder from './views/finishedOrder.vue'
+import Startpage from './views/Welcome.vue'
 
 Vue.use(Router)
 
@@ -17,7 +20,7 @@ let router = new Router({
     {
       path: '/finishedOrder',
       meta: {
-        title: 'Finished order',
+        title: 'Finishedorder',
       },
       name: 'Finished order',
       component:  () => import(/* webpackChunkName: "read" */ './views/finishedOrder.vue')
@@ -25,9 +28,9 @@ let router = new Router({
     {
       path: '/startpage',
       meta: {
-        title: 'Start page',
+        title: 'Startpage',
       },
-      name: 'Start page',
+      name: 'Startpage',
       component:  () => import(/* webpackChunkName: "read" */ './views/Welcome.vue')
     },
     {
